@@ -5,32 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/app_background">
 
-<!--        <FrameLayout-->
-<!--            android:id="@+id/fl_main_fragment_content"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_above="@+id/category_line" />-->
-
-<!--        &lt;!&ndash;虚拟的线&ndash;&gt;-->
-<!--        <LinearLayout-->
-<!--            android:id="@+id/category_line"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <View-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0.5dip"-->
-<!--                android:background="@color/common_underline" />-->
-
-
-<!--        </LinearLayout>-->
-
-
-
-
-
 
     <!--    </FrameLayout>-->
     <com.next.easynavigation.view.EasyNavigationBar
@@ -39,5 +13,11 @@
         android:layout_height="match_parent"
         android:background="@color/white" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_50"
+        android:text="Main" />
 </RelativeLayout>
 

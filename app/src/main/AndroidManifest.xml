@@ -32,7 +32,7 @@
             android:value="true" />
 
         <activity
-            android:name="com.app.my.LunchActivity"
+            android:name="com.app.lunch.LunchActivity"
             android:screenOrientation="portrait"
             android:theme="@style/App_Lunch_Theme">
             <intent-filter>

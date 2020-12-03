@@ -19,6 +19,11 @@ android {
             ndk {
                 abiFilters "armeabi"
             }
+            kapt {
+                arguments {
+                    arg("AROUTER_MODULE_NAME", project.getName())
+                }
+            }
         }
 
         //即使报错了也不终止打包
@@ -88,6 +93,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':lib_base')
     implementation project(':lib_easynavigation')
+    kapt "com.alibaba:arouter-compiler:$depv.arouter_compiler"
 }
 walle {
     // 指定渠道包的输出路径
