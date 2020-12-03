@@ -7,6 +7,12 @@ public class PathConfig {
          *
          */
         public static final String MainActivity = "/main/MainActivity";
+
+        /**
+         *
+         */
+        public static final String HomeFragment = "/main/HomeFragment";
+
         /**
          *
          */
