@@ -10,7 +10,7 @@ android {
         Properties props = new Properties()
         props.load(new InputStreamReader(new FileInputStream(propFile), "utf-8"))
         defaultConfig {
-            applicationId "com.app.micaihu"
+            applicationId "com.app.test"
             minSdkVersion buildv.min_sdk
             targetSdkVersion buildv.target_sdk
             versionCode Integer.parseInt(props["VERSION_CODE"])
@@ -71,7 +71,7 @@ android {
         variant.outputs.all { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                def fileName = outputFile.name.replace(".apk", "-micaihu${defaultConfig.versionCode}-${defaultConfig.versionName}.apk")
+                def fileName = outputFile.name.replace(".apk", "-test${defaultConfig.versionCode}-${defaultConfig.versionName}.apk")
                 outputFileName = fileName
             }
         }
@@ -93,7 +93,7 @@ walle {
     apkOutputFolder = new File("${project.getProjectDir()}/channels/channels");
 
     // 定制渠道包的APK的文件名称
-    apkFileNameFormat = '${appName}-micaihu-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    apkFileNameFormat = '${appName}-test-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
     // 渠道配置文件
 //    channelFile = new File("${project.getProjectDir()}/channels/channel") //内部升级 渠道
     channelFile = new File("${project.getProjectDir()}/channels/channelw") //内部升级 渠道
