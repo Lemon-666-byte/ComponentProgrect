@@ -1,9 +1,9 @@
 package com.app.config
 
 /**
- * SharedPreferences 保存的key
+ * MMkvConfigs 保存的key
  */
-class SharedConfigs {
+class MMkvConfigs {
     /**
      * 加密串
      */

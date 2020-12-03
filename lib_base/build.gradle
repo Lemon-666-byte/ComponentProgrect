@@ -107,5 +107,8 @@ dependencies {
     api 'com.tencent.tbs.tbssdk:sdk:43939'
     api 'vip.ruoyun.helper:avoid-onresult-helper:1.0.4'
 
+    api 'com.tencent:mmkv-static:1.2.5'
+    api 'com.getkeepsafe.relinker:relinker:1.4.1'
+
 }
 

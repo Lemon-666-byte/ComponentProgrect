@@ -1,8 +1,7 @@
 package com.app.utils.biz
 
-import com.app.config.SharedConfigs
+import com.app.config.MMkvConfigs
 import com.blankj.utilcode.util.JsonUtils
-import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.SPUtils
 
 /**
@@ -19,21 +18,21 @@ class Biz private constructor() {
 
 
     var userInfo: String
-        get() = SPUtils.getInstance().getString(SharedConfigs.UserData.userInfo)
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.userInfo)
         set(userInfo) {
-            SPUtils.getInstance().put(SharedConfigs.UserData.userInfo, userInfo, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.userInfo, userInfo, true)
         }
 
     var userTask: String
-        get() = SPUtils.getInstance().getString(SharedConfigs.UserData.userTask)
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.userTask)
         set(userTask) {
-            SPUtils.getInstance().put(SharedConfigs.UserData.userTask, userTask, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.userTask, userTask, true)
         }
 
     var lastUserInfo: String
-        get() = SPUtils.getInstance().getString(SharedConfigs.UserData.lastUserInfo)
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.lastUserInfo)
         set(lastUserInfo) {
-            SPUtils.getInstance().put(SharedConfigs.UserData.lastUserInfo, lastUserInfo, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.lastUserInfo, lastUserInfo, true)
         }
 
     fun token(): String {
@@ -55,9 +54,9 @@ class Biz private constructor() {
     }
 
     var military: String
-        get() = SPUtils.getInstance().getString(SharedConfigs.UserData.military)
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.military)
         set(military) {
-            SPUtils.getInstance().put(SharedConfigs.UserData.military, military, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.military, military, true)
         }
 
 }

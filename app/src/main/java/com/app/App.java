@@ -1,10 +1,13 @@
-package com.app.my;
+package com.app;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.app.test.BuildConfig;
 import com.blankj.utilcode.util.Utils;
+import com.getkeepsafe.relinker.ReLinker;
+import com.tencent.mmkv.MMKV;
 import com.tencent.smtt.sdk.QbSdk;
 
 public class App extends Application {
@@ -14,6 +17,7 @@ public class App extends Application {
         super.onCreate();
         Utils.init(this);
         initARouter();
+        initMMkv();
         initX5();
     }
 
@@ -45,5 +49,13 @@ public class App extends Application {
             }
         };
         QbSdk.initX5Environment(this, callback);
+    }
+
+    private void initMMkv() {
+        String dir = getFilesDir().getAbsolutePath() + "/mmkv";
+        MMKV.initialize(dir, libName -> {
+            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
+            ReLinker.loadLibrary(App.this, libName);
+        });
     }
 }
