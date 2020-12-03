@@ -16,7 +16,6 @@ class Biz private constructor() {
         }
     }
 
-
     var userInfo: String
         get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.userInfo)
         set(userInfo) {
