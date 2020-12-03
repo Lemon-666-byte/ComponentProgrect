@@ -19,10 +19,7 @@ class LunchActivity : BaseActivity() {
         super.initBar(false)
         BarUtils.transparentStatusBar(this)
     }
-
-    override fun getLayoutId(): Int {
-        return R.layout.lunch_activity
-    }
+    override fun getLayoutId() = R.layout.lunch_activity
 
     var delaySubscribe: Disposable? = null
 
