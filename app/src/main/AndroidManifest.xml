@@ -14,11 +14,10 @@
         android:usesCleartextTraffic="true"
         tools:replace="allowBackup">
 
+
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" />
-
-        <!--适配全面屏 -->
+            android:required="false" /> <!-- 适配全面屏 -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
@@ -27,9 +26,7 @@
             android:value="true" /> <!-- 适配小米(xiao mi)刘海屏 -->
         <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" />
-
-        <!--适配刘海屏、水滴屏 Android P -->
+            android:value="portrait|landscape" /> <!-- 适配刘海屏、水滴屏 Android P -->
         <meta-data
             android:name="android.vendor.full_screen"
             android:value="true" />
@@ -40,12 +37,14 @@
             android:theme="@style/App_Lunch_Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
+        <activity
+            android:name="com.app.main.MainActivity"
+            android:screenOrientation="portrait" />
     </application>
-
 
 </manifest>

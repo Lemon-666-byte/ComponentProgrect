@@ -3,6 +3,7 @@ package com.app.my;
 import com.app.base.BaseActivity;
 import com.app.test.R;
 import com.blankj.utilcode.util.BarUtils;
+import com.blankj.utilcode.util.ViewUtils;
 
 /**
  * 软件启动页面
@@ -20,12 +21,17 @@ public class LunchActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_lunch;
+        return R.layout.lunch_activity;
     }
 
     @Override
     protected void setData() {
-
+        ViewUtils.runOnUiThreadDelayed(new Runnable() {
+            @Override
+            public void run() {
+                
+            }
+        }, 2000);
     }
 
     @Override

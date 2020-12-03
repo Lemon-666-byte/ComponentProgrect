@@ -1,1 +1,1 @@
-include ':app', ':lib_library',':lib_easynavigation'
+include ':app', ':lib_base',':lib_easynavigation'
