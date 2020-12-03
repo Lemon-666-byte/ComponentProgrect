@@ -1,0 +1,12 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <!-- 程序主题 -->
+
+    <!--运行页面样式-->
+    <style name="App_Lunch_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/app_start_layout_drawable</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+</resources>

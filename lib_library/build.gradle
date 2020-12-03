@@ -1,0 +1,122 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion buildv.compile_sdk
+    File propFile = file('../config.properties')
+    if (propFile.exists()) {
+        Properties props = new Properties()
+        props.load(new InputStreamReader(new FileInputStream(propFile), "utf-8"))
+
+        defaultConfig {
+            minSdkVersion buildv.min_sdk
+            targetSdkVersion buildv.target_sdk
+            versionCode 1
+            versionName "1.0"
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = [moduleName: project.getName()] // 路由
+                }
+            }
+        }
+        signingConfigs {
+            debug {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+            release {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+        }
+
+        buildTypes {
+            debug {
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                buildConfigField "String", "HOST", props["HOST_DEBUG"]
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.debug
+            }
+            release {
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                buildConfigField "String", "HOST", props["HOST_RELEASE"]
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //阿里反馈
+    api 'com.aliyun.ams:alicloud-android-feedback:3.3.1'
+    //公共依赖库
+    api 'com.aliyun.ams:alicloud-android-utdid:1.5.2'
+    api 'com.aliyun.ams:alicloud-android-utils:1.1.6.4'
+    api 'com.aliyun.ams:alicloud-android-ut:5.4.3'
+    api 'com.aliyun.ams:alicloud-android-beacon:1.0.4.3'
+    //阿里反馈
+
+
+
+    api "com.jeremyliao:live-event-bus-x:$depv.live_event_bus"
+
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'androidx.core:core-ktx:1.3.2'
+    api "androidx.appcompat:appcompat:1.3.0-alpha02"
+//    api "androidx.appcompat:appcompat:$depv.appcompat"
+    api "com.google.android.material:material:$depv.material"
+    api 'com.android.support.constraint:constraint-layout:2.0.4'
+    api "com.squareup.okhttp3:okhttp:$depv.okhttp"
+    api "com.google.code.gson:gson:$depv.gson"
+    //工具类
+    api "com.blankj:utilcodex:$depv.utilcode"
+
+    api "io.reactivex.rxjava3:rxjava:$depv.rx_java"
+    api "io.reactivex.rxjava3:rxandroid:$depv.rx_android"
+
+    //retrofit
+    api "com.squareup.retrofit2:retrofit:$depv.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$depv.retrofit"
+    api "com.squareup.retrofit2:adapter-rxjava3:$depv.retrofit"
+
+    //glide
+    api "com.github.bumptech.glide:glide:$depv.glide"
+    kapt "com.github.bumptech.glide:compiler:$depv.glide"
+
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$depv.base_adapter"
+
+    api "com.uber.autodispose2:autodispose:$depv.autodispose"
+    api "com.uber.autodispose2:autodispose-lifecycle:$depv.autodispose"
+    api "com.uber.autodispose2:autodispose-androidx-lifecycle:$depv.autodispose"
+//    api "com.gyf.immersionbar:immersionbar:$depv.immersionbar"
+
+    api "com.meituan.android.walle:library:$depv.plugin_walle"
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    api 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+
+
+
+
+    api 'com.github.HuanTanSheng:EasyPhotos:3.0.6'
+    api 'com.github.hackware1993:MagicIndicator:1.6.0'
+    api 'com.isseiaoki:simplecropview:1.1.8'
+    api 'com.tencent.tbs.tbssdk:sdk:43939'
+
+    api 'vip.ruoyun.helper:avoid-onresult-helper:1.0.4'
+
+    api 'com.yanzhenjie.recyclerview:x:1.3.2'
+
+}
+

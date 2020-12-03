@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: './versions.gradle'
+    ext.kotlin_version = '1.4.20'
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$buildv.gradle_tools"
+        classpath "com.meituan.android.walle:plugin:$depv.plugin_walle"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+        maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' } // 友盟 第三方登录 分享 统计
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' } // 阿里反馈
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

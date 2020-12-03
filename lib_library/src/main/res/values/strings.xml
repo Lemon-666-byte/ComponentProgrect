@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Utils Library</string>
+
+
+    <!-- 默认的string -->
+    <string name="common_loading">正在载入</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_done">完成</string>
+    <string name="common_close">关闭</string>
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+    <string name="common_default">默认</string>
+    <string name="common_setting">设置</string>
+    <string name="common_already_open">已开启</string>
+    <string name="common_already_close">已关闭</string>
+    <string name="common_already_forbidden">已禁止</string>
+    <string name="common_switch_checkbox_on">ON</string>
+    <string name="common_switch_checkbox_off">OFF</string>
+    <string name="common_setting_up">设定</string>
+
+
+    <!--图片选择器-->
+    <string name="all_image">所有图片</string>
+    <string name="picture">图片</string>
+    <string name="take_picture">拍摄照片</string>
+    <string name="preview">预览</string>
+    <string name="preview_num">预览(%1$d)</string>
+    <string name="choose">选择</string>
+    <string name="done">完成</string>
+    <string name="use">使用</string>
+    <string name="done_num">完成(%1$d/%2$d)</string>
+    <string name="num_postfix">%1$s张</string>
+    <string name="message_max_num">你最多可以选择%1$s张图片</string>
+    <string name="save_ing">保存图片中…</string>
+    <string name="empty_no_data">暂无数据</string>
+
+    <string name="empty_network_error">网络不给力,请检查网络</string>
+
+    <string name="connect_error">网络连接失败,请检查网络</string>
+    <string name="connect_timeout">连接超时,请稍后再试</string>
+    <string name="bad_network">服务器异常</string>
+    <string name="parse_error">解析服务器响应数据失败</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="no_data_text">没有数据</string>
+    <string name="no_net_error">网络错误,请稍后再试</string>
+    <string name="response_return_error">服务器返回数据失败</string>
+
+    <string name="permission_rationale_message">您拒绝了我们申请授权，请同意授权，否则该功能不能正常使用！是否继续请求权限？</string>
+    <string name="permission_denied_forever_message">我们需要一些您拒绝的权限，请手动设置到页面授权，否则功能不能正常使用！</string>
+
+
+    <string name="main_loading">情报拼命输送中...</string>
+    <string name="homepage_msg_nomsg">还没有数据</string>
+    <string name="empty_collection">暂无收藏</string>
+    <string name="empty_collection2">快去收藏你喜欢的内容吧！</string>
+    <string name="dataerror">数据错误,请稍后再试</string>
+</resources>

@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'walle'
+android {
+    compileSdkVersion buildv.compile_sdk
+    File propFile = file('../config.properties')
+    if (propFile.exists()) {
+        Properties props = new Properties()
+        props.load(new InputStreamReader(new FileInputStream(propFile), "utf-8"))
+        defaultConfig {
+            applicationId "com.app.micaihu"
+            minSdkVersion buildv.min_sdk
+            targetSdkVersion buildv.target_sdk
+            versionCode Integer.parseInt(props["VERSION_CODE"])
+            versionName props['VERSION_NAME']
+            multiDexEnabled true
+            ndk {
+                abiFilters "armeabi"
+            }
+        }
+
+
+        //即使报错了也不终止打包
+        lintOptions {
+            abortOnError false
+        }
+
+        //gradle dex 的时候分配的内存.
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+
+        signingConfigs {
+            debug {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+            release {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+        }
+
+        buildTypes {
+            debug {
+//                applicationIdSuffix props['DEBUG_APP_APPID']
+                minifyEnabled false
+                shrinkResources false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.debug
+            }
+            release {
+                minifyEnabled true
+                shrinkResources true
+                zipAlignEnabled true
+                jniDebuggable false
+                renderscriptDebuggable false
+                debuggable false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "-micaihu${defaultConfig.versionCode}-${defaultConfig.versionName}.apk")
+                outputFileName = fileName
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib_library')
+    implementation project(':lib_easynavigation')
+
+}
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.getProjectDir()}/channels/channels");
+
+    // 定制渠道包的APK的文件名称
+    apkFileNameFormat = '${appName}-micaihu-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    // 渠道配置文件
+//    channelFile = new File("${project.getProjectDir()}/channels/channel") //内部升级 渠道
+    channelFile = new File("${project.getProjectDir()}/channels/channelw") //内部升级 渠道
+}

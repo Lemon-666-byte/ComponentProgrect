@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--9.0 系统适配 网络问题-->
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config>
+        <domain includeSubdomains="true">i.snssdk.com</domain>
+        <domain includeSubdomains="true">is.snssdk.com</domain>
+        <domain includeSubdomains="true">extlog.snssdk.com</domain>
+        <trust-anchors>
+            <certificates src="user" />
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

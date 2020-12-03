@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+
+    <string-array name="warZone">
+        <item>东方战区</item>
+        <item>西方战区</item>
+        <item>南方战区</item>
+        <item>北方战区</item>
+        <item>中央战区</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 控件特有的 id -->
+    <item type="id" name="gridview" />
+    <item type="id" name="webview" />
+    <item type="id" name="scrollview" />
+    <item type="id" name="simpleDraweeView" />
+
+    <item type="id" name="aboutImageGridView"/>
+
+</resources>

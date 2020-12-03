@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion buildv.compile_sdk
+
+    File propFile = file('../config.properties')
+    if (propFile.exists()) {
+        Properties props = new Properties()
+        props.load(new InputStreamReader(new FileInputStream(propFile), "utf-8"))
+
+        defaultConfig {
+            minSdkVersion buildv.min_sdk
+            targetSdkVersion buildv.target_sdk
+            versionCode 1
+            versionName "1.0"
+        }
+        signingConfigs {
+            debug {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+            release {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+            }
+        }
+
+        buildTypes {
+            debug {
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.debug
+            }
+            release {
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation "androidx.appcompat:appcompat:$depv.appcompat"
+//    implementation 'com.daimajia.easing:library:2.4@aar'
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+}
