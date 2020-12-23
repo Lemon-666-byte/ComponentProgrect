@@ -11,18 +11,44 @@
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:visibility="gone" />
 
     <FrameLayout
         android:id="@+id/rlContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pt_50"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/pt_350"
+            android:layout_height="@dimen/pt_50"
+            android:layout_marginTop="@dimen/pt_100"
+            android:background="@color/colorRed"
+            android:gravity="center"
+            android:text="Main" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pt_50"
+            android:background="@color/colorFE9517"
+            android:gravity="center"
+            android:text="Main" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/pt_85"
+        android:layout_height="@dimen/pt_90"
+        android:layout_marginTop="@dimen/pt_100"
+        android:background="@color/color666"
         android:gravity="center"
-        android:padding="@dimen/dp_50"
         android:text="Main" />
 </RelativeLayout>
 

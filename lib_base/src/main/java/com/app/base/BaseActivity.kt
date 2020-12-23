@@ -3,6 +3,7 @@ package com.app.base
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -12,12 +13,10 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.launcher.ARouter
+import com.app.config.BaseConfigs
 import com.app.utils.R
 import com.app.widget.CommonTitle
-import com.blankj.utilcode.util.ActivityUtils
-import com.blankj.utilcode.util.BarUtils
-import com.blankj.utilcode.util.ColorUtils
-import com.blankj.utilcode.util.SizeUtils
+import com.blankj.utilcode.util.*
 
 abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBackListener {
     protected val classTag = this.javaClass.simpleName
@@ -132,5 +131,10 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
 
     fun getCommonTitle(): CommonTitle {
         return this.commonTitle!!
+    }
+
+    override fun getResources(): Resources {
+        return AdaptScreenUtils.adaptWidth(super.getResources(), BaseConfigs.Screen.designWidth)
+//        return AdaptScreenUtils.closeAdapt(super.getResources())
     }
 }

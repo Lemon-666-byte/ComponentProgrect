@@ -1,8 +1,11 @@
 package com.app.base
 
 import android.content.Context
+import android.content.res.Resources
 import android.view.View
 import android.widget.LinearLayout
+import com.app.config.BaseConfigs
+import com.blankj.utilcode.util.AdaptScreenUtils
 
 /**
  * header
@@ -31,5 +34,9 @@ abstract class BaseHeaderView(context: Context) : LinearLayout(context), View.On
         thisView = View.inflate(getContext(), getLayoutId(), null)
         this.addView(thisView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
 
+    }
+
+    override fun getResources(): Resources {
+        return AdaptScreenUtils.adaptWidth(super.getResources(), BaseConfigs.Screen.designWidth)
     }
 }
