@@ -1,7 +1,7 @@
 <resources>
     <!--运行页面样式-->
     <style name="App_Lunch_Theme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/app_lunch_layout_drawable</item>
+        <item name="android:windowBackground">@drawable/app_lunch_drawable</item>
         <item name="android:windowFullscreen">true</item>
 
     </style>
