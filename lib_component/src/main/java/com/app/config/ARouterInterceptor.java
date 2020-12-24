@@ -12,6 +12,7 @@ import com.app.utils.biz.Biz;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.ViewUtils;
 
 /**
@@ -37,6 +38,7 @@ public class ARouterInterceptor implements IInterceptor {
         if (PathConfig.Home.HomeActivity.equals(postcard.getPath())) {
             // 这里的弹窗仅做举例，代码写法不具有可参考价值
             if (StringUtils.isEmpty(Biz.getInstance().uid())) {
+                ToastUtils.showShort("未登录 跳转登录");
                 LogUtils.e("ARouterInterceptor", "跳转登录->" + postcard.getPath());
             } else {
                 callback.onContinue(postcard);
