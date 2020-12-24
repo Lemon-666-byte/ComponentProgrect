@@ -2,6 +2,7 @@ package com.app.main
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.net.Uri
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
@@ -31,6 +32,11 @@ class MainActivity : BaseActivity() {
         tvGo.setOnClickListener {
             LogUtils.e("ARouterInterceptor", "->" + "tvGo")
             ARouter.getInstance().build(PathConfig.Home.HomeActivity).navigation()
+
+//            val testUriMix = Uri.parse("arouter://m.aliyun.com/home/HomeActivity")
+//            ARouter.getInstance().build(testUriMix)
+//                    .withString("key1", "value1")
+//                    .navigation()
         }
     }
 
