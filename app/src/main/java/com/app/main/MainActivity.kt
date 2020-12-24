@@ -2,16 +2,11 @@ package com.app.main
 
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.util.TypedValue
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.app.base.BaseActivity
 import com.app.config.PathConfig
-import com.app.my.TestDialog
 import com.app.test.R
-import com.blankj.utilcode.util.AdaptScreenUtils
-import com.blankj.utilcode.util.SizeUtils
-import com.blankj.utilcode.util.ToastUtils
 
 
 @Route(path = PathConfig.Main.MainActivity)
@@ -23,12 +18,9 @@ class MainActivity : BaseActivity() {
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
 //
 //        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })
-        ToastUtils.showShort("bbbbbb")
-
 //        val testDialog: TestDialog = TestDialog()
 //        testDialog.show(supportFragmentManager)
 //        showTwo()
-       val s= SizeUtils.applyDimension(20f,TypedValue.COMPLEX_UNIT_PT)
 
     }
 
