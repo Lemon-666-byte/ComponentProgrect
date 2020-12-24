@@ -45,6 +45,12 @@ class LunchActivity : BaseActivity() {
         delaySubscribe?.dispose()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        delaySubscribe?.dispose()
+
+    }
+
     private fun toMain() {
 
         ARouter.getInstance().build(PathConfig.Main.MainActivity).navigation(this, object : NavigationCallback {

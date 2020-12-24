@@ -28,9 +28,10 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvGo"
             android:layout_width="@dimen/pt_350"
-            android:layout_height="@dimen/pt_50"
-            android:background="@color/colorRed"
+            android:layout_height="@dimen/pt_100"
+            android:background="@color/color5A9622"
             android:gravity="center" />
 
         <TextView

@@ -58,7 +58,6 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api project(':lib_component')
 
     //路由
     api("com.alibaba:arouter-api:$depv.arouter_api") {

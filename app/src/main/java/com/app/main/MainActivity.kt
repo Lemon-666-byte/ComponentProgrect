@@ -4,9 +4,12 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
 import com.app.config.PathConfig
 import com.app.test.R
+import com.blankj.utilcode.util.LogUtils
+import kotlinx.android.synthetic.main.main_activity.*
 
 
 @Route(path = PathConfig.Main.MainActivity)
@@ -25,6 +28,10 @@ class MainActivity : BaseActivity() {
     }
 
     override fun addListeners() {
+        tvGo.setOnClickListener {
+            LogUtils.e("ARouterInterceptor", "->" + "tvGo")
+            ARouter.getInstance().build(PathConfig.Home.HomeActivity).navigation()
+        }
     }
 
     /**

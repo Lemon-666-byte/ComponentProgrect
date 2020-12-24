@@ -1,13 +1,10 @@
 package com.app.home;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.app.base.BaseActivity;
-import com.app.config.EventConfigs;
 import com.app.config.PathConfig;
 import com.app.home.fragment.HomeFragment;
 import com.blankj.utilcode.util.FragmentUtils;
-import com.jeremyliao.liveeventbus.LiveEventBus;
 
 @Route(path = PathConfig.Home.HomeActivity)
 public class HomeActivity extends BaseActivity {

@@ -1,11 +1,9 @@
 package com.app;
 
 import android.app.Application;
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.app.component.BuildConfig;
+import com.app.utils.BuildConfig;
 import com.blankj.utilcode.util.Utils;
 import com.getkeepsafe.relinker.ReLinker;
 import com.tencent.mmkv.MMKV;
