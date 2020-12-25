@@ -57,7 +57,7 @@ public abstract class BaseApplication extends Application {
                 com.blankj.utilcode.util.LogUtils.e("x5初始化->" + b);
             }
         };
-        QbSdk.initX5Environment(this, callback);
+        QbSdk.initX5Environment(getApplicationContext(), callback);
     }
 
     private void initMMkv() {
