@@ -49,12 +49,12 @@ public abstract class BaseApplication extends Application {
 
             @Override
             public void onCoreInitFinished() {
-                com.blankj.utilcode.util.LogUtils.e("x5 onCoreInitFinished()");
+//                com.blankj.utilcode.util.LogUtils.e("x5 onCoreInitFinished()");
             }
 
             @Override
             public void onViewInitFinished(boolean b) {
-                com.blankj.utilcode.util.LogUtils.e("x5->" + b);
+                com.blankj.utilcode.util.LogUtils.e("x5初始化->" + b);
             }
         };
         QbSdk.initX5Environment(this, callback);
@@ -63,7 +63,7 @@ public abstract class BaseApplication extends Application {
     private void initMMkv() {
         String dir = getFilesDir().getAbsolutePath() + "/mmkv";
         MMKV.initialize(dir, libName -> {
-            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
+//            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
             ReLinker.loadLibrary(this, libName);
         });
     }
