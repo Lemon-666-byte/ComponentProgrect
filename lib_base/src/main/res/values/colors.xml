@@ -2,7 +2,8 @@
 <resources>
     <!-- 程序默认背景颜色 -->
     <!-- 程序主色调 -->
-    <color name="app_theme">#5a9722</color>
+<!--    <color name="app_theme">#5a9722</color>-->
+    <color name="app_theme">#222222</color>
     <color name="app_background">#fffafafa</color>
 
     <color name="colorWhite">#FFFFFF</color>
@@ -67,84 +68,7 @@
     <color name="colorFF8500">#FF8500</color>
     <color name="color5A9622">#5A9622</color>
     <color name="colorD59A1C">#D59A1C</color>
-    <!-- 以颜色名称命名 -->
-    <color name="translucent">#ae000000</color><!-- 半透明色 -->
-    <color name="transparent">#00000000</color><!-- 全透明 -->
-    <color name="trans_white_0">#66ffffff</color>
-    <color name="trans_white_1">#22ffffff</color>
-    <color name="trans_black_0">#66000000</color>
-    <color name="trans_black_1">#22000000</color>
-    <color name="trans_blue_0">#44007dce</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
 
-
-    <color name="blue_light">#2A90D7</color>
-    <color name="gray">#A3A3A3</color>
-    <color name="gray_dark">#646464</color>
-
-
-    <!-- 绿色颜色<由深到浅> -->
-    <color name="common_bg_green_1">#5a9722</color>
-    <color name="common_bg_green_2">#6aa431</color>
-    <color name="common_bg_green_3">#4a8631</color>
-    <color name="common_bg_green_4">#7cb228</color>
-    <color name="common_bg_green_5">#8cbf26</color>
-
-    <!-- 辅助颜色 -->
-    <color name="common_orange_color">#f9630e</color>
-    <color name="common_yellow_color">#ffdb0c</color>
-    <color name="common_red_color">#e55d5d</color>
-    <color name="common_gray_color">#cccccc</color>
-    <color name="common_white_color">#ffffff</color>
-    <color name="common_black_color">#000000</color>
-    <color name="common_black_transparent10per">#19000000</color>
-    <color name="common_black_transparent20per">#33000000</color>
-    <color name="common_black_transparent30per">#4c000000</color>
-    <color name="common_black_transparent40per">#66000000</color>
-    <color name="common_black_transparent50per">#7f000000</color>
-    <color name="common_black_transparent60per">#99000000</color>
-    <color name="common_black_transparent70per">#b2000000</color>
-    <color name="common_black_transparent80per">#c8000000</color>
-    <color name="common_black_transparent90per">#e5000000</color>
-    <color name="common_title_bg_color">#5a9722</color>
-    <color name="common_title_bar_divider">#d7d7d7</color>
-    <color name="common_bar_divider1">#e8e8e8</color>
-    <color name="common_bar_divider2">#d7d7d7</color>
-    <color name="common_bar_divider3">#ffffff</color>
-
-
-    <!-- 默认的文字颜色 -->
-    <color name="common_font_color_1">#222222</color>
-    <color name="common_font_color_2">#333333</color>
-    <color name="common_font_color_3">#666666</color>
-    <color name="common_font_color_4">#888888</color>
-    <color name="common_font_color_5">#bbbbbb</color>
-    <color name="common_font_color_6">#ffffff</color>
-    <color name="common_font_color_7">#5a9722</color>
-    <color name="common_font_color_8">#546a93</color>
-    <color name="common_font_color_9">#e55d5d</color>
-    <color name="common_font_color_10">#f9630e</color>
-    <color name="common_font_color_11">#ffdb0c</color>
-    <color name="common_font_color_12">#6aa431</color>
-    <color name="common_font_color_13">#cccccc</color>
-    <color name="common_font_color_14">#e7e7e7</color>
-    <color name="common_font_color_60">#99ffffff</color>
-    <color name="common_font_color_61">#fafafa</color>
-    <!--图片选择器-->
-
-    <color name="white_70">#ADFFFFFF</color>
-    <color name="green">#43c117</color>
-    <color name="green_70">#AD43c117</color>
-    <color name="bar_grey">#393a3e</color>
-    <color name="bar_grey_90">#dd393a3e</color>
-    <color name="grey">#999999</color>
-    <color name="content_grey">#353535</color>
-    <color name="image_overlay">#20000000</color>
-    <color name="image_overlay2">#80000000</color>
-
-
-    <color name="send_post_btn">#4A4A4A</color>
 
 
 </resources>

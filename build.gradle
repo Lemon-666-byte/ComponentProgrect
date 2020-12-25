@@ -2,7 +2,7 @@
 
 buildscript {
     apply from: './versions.gradle'
-    ext.kotlin_version = '1.4.20'
+    ext.kotlin_version = '1.4.21'
     repositories {
         jcenter()
         google()
@@ -19,7 +19,7 @@ allprojects {
         jcenter()
         google()
         maven { url "https://jitpack.io" }
-        maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }
+        maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }//个推
         maven { url 'https://dl.bintray.com/umsdk/release' } // 友盟 第三方登录 分享 统计
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' } // 阿里反馈
     }

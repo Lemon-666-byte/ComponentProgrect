@@ -69,7 +69,7 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
         this.statusBar = initBar
         if (statusBar) {
             BarUtils.setStatusBarLightMode(this, true)
-            BarUtils.setStatusBarColor(this, ColorUtils.getColor(R.color.white))
+            BarUtils.setStatusBarColor(this, ColorUtils.getColor(R.color.colorWhite))
             commonTitle?.let {
                 BarUtils.addMarginTopEqualStatusBarHeight(it)
             }

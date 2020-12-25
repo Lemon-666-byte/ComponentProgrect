@@ -17,6 +17,10 @@ import kotlinx.android.synthetic.main.main_activity.*
 class MainActivity : BaseActivity() {
     override fun getLayoutId() = R.layout.main_activity
 
+    override fun initBar(initBar: Boolean) {
+        super.initBar(false)
+    }
+
     override fun setData() {
 //        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
@@ -27,6 +31,7 @@ class MainActivity : BaseActivity() {
 //        showTwo()
 
     }
+
 
     override fun addListeners() {
         tvGo.setOnClickListener {

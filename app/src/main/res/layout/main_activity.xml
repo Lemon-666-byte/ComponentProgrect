@@ -12,7 +12,7 @@
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/colorWhite"
         android:visibility="gone" />
 
     <FrameLayout
@@ -31,7 +31,7 @@
             android:id="@+id/tvGo"
             android:layout_width="@dimen/pt_350"
             android:layout_height="@dimen/pt_100"
-            android:background="@color/color5A9622"
+            android:background="@color/colorBlue"
             android:gravity="center" />
 
         <TextView
@@ -78,6 +78,18 @@
             android:gravity="center" />
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/pt_80"
+        android:layout_height="@dimen/pt_80"
+        android:background="@color/color666"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/color9C860D"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:layout_width="80dp"
