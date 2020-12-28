@@ -135,6 +135,5 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
 
     override fun getResources(): Resources {
         return AdaptScreenUtils.adaptWidth(super.getResources(), BaseConfigs.Screen.designWidth)
-//        return AdaptScreenUtils.closeAdapt(super.getResources())
     }
 }
