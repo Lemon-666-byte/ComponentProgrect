@@ -3,7 +3,7 @@ package com.app.config
 /**
  * SharedPreferences 保存的key
  */
-class SharedConfigs {
+class MMmapConfigs {
     /**
      * 加密串
      */

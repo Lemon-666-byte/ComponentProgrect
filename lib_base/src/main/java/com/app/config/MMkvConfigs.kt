@@ -15,10 +15,8 @@ class MMkvConfigs {
      * 用户信息 key
      */
     object UserData {
-        const val userInfo = "userInfo"
-        const val userTask = "userTask"
-        const val military = "military"
-        const val lastUserInfo = "lastUserInfo"
+        const val token = "token"
+        const val uid = "uid"
     }
 
     object AppConfig {

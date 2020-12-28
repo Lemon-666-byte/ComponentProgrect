@@ -16,46 +16,16 @@ class Biz private constructor() {
         }
     }
 
-    var userInfo: String
-        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.userInfo)
+    var uid: String
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.uid)
         set(userInfo) {
-            SPUtils.getInstance().put(MMkvConfigs.UserData.userInfo, userInfo, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.uid, userInfo, true)
         }
 
     var userTask: String
-        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.userTask)
+        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.token)
         set(userTask) {
-            SPUtils.getInstance().put(MMkvConfigs.UserData.userTask, userTask, true)
-        }
-
-    var lastUserInfo: String
-        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.lastUserInfo)
-        set(lastUserInfo) {
-            SPUtils.getInstance().put(MMkvConfigs.UserData.lastUserInfo, lastUserInfo, true)
-        }
-
-    fun token(): String {
-        var tokenStr = ""
-        val userInfoStr = userInfo
-        if (userInfoStr.isNotEmpty()) {
-            tokenStr = JsonUtils.getString(userInfoStr, "token", "")
-        }
-        return tokenStr
-    }
-
-    fun uid(): String {
-        var uidStr = ""
-        val userInfoStr = userInfo
-        if (userInfoStr.isNotEmpty()) {
-            uidStr = JsonUtils.getString(userInfoStr, "uid", "")
-        }
-        return uidStr
-    }
-
-    var military: String
-        get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.military)
-        set(military) {
-            SPUtils.getInstance().put(MMkvConfigs.UserData.military, military, true)
+            SPUtils.getInstance().put(MMkvConfigs.UserData.token, userTask, true)
         }
 
 }
