@@ -22,7 +22,7 @@ class Biz private constructor() {
             SPUtils.getInstance().put(MMkvConfigs.UserData.uid, userInfo, true)
         }
 
-    var userTask: String
+    var token: String
         get() = SPUtils.getInstance().getString(MMkvConfigs.UserData.token)
         set(userTask) {
             SPUtils.getInstance().put(MMkvConfigs.UserData.token, userTask, true)

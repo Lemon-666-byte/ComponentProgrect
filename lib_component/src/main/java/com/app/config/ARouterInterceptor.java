@@ -33,7 +33,7 @@ public class ARouterInterceptor implements IInterceptor {
         LogUtils.e("ARouterInterceptor", "ARouterInterceptor->" + postcard.getPath());
         if (PathConfig.Home.HomeActivity.equals(postcard.getPath())) {
             // 这里的弹窗仅做举例，代码写法不具有可参考价值
-            if (StringUtils.isEmpty(Biz.getInstance().uid())) {
+            if (StringUtils.isEmpty(Biz.getInstance().getUid())) {
                 ToastUtils.showShort("未登录 跳转登录");
                 LogUtils.e("ARouterInterceptor", "跳转登录->" + postcard.getPath());
             } else {

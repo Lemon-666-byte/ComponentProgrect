@@ -7,9 +7,11 @@ import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
+import com.app.config.EventConfigs
 import com.app.config.PathConfig
 import com.app.test.R
 import com.blankj.utilcode.util.LogUtils
+import com.jeremyliao.liveeventbus.LiveEventBus
 import kotlinx.android.synthetic.main.main_activity.*
 
 
@@ -25,7 +27,7 @@ class MainActivity : BaseActivity() {
 //        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
 //
-//        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })
+        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        val testDialog: TestDialog = TestDialog()
 //        testDialog.show(supportFragmentManager)
 //        showTwo()

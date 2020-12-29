@@ -31,8 +31,8 @@ class HeadIntercept : Interceptor {
 //                        .addHeader("ms", getComonUriParms())
 //                        .addHeader("cv", AppTools.getVersionName())
                         .addHeader("referer", BuildConfig.HOST)
-                        .addHeader("token", Biz.instance.token())
-                        .addHeader("uid", Biz.instance.uid())
+                        .addHeader("token", Biz.instance.token)
+                        .addHeader("uid", Biz.instance.uid)
                         .post(body)
             }
 //            LogUtils.e("instance->" + Biz.instance.token())
