@@ -62,9 +62,10 @@ public abstract class BaseApplication extends Application {
 
     private void initMMkv() {
         String dir = getFilesDir().getAbsolutePath() + "/mmkv";
-        MMKV.initialize(dir, libName -> {
-//            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
-            ReLinker.loadLibrary(this, libName);
-        });
+        MMKV.initialize(this);
+//        MMKV.initialize(dir, libName -> {
+////            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
+//            ReLinker.loadLibrary(this, libName);
+//        });
     }
 }
