@@ -1,7 +1,7 @@
 package com.app.config
 
 /**
- * MMkvConfigs 保存的key
+ * SharedPreferences 保存的key
  */
 class MMkvConfigs {
     /**
@@ -15,8 +15,8 @@ class MMkvConfigs {
      * 用户信息 key
      */
     object UserData {
-        const val token = "token"
         const val uid = "uid"
+        const val token = "token"
     }
 
     object AppConfig {

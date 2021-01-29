@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'walle'
 }
@@ -99,7 +98,6 @@ dependencies {
         //使用 runtimeOnly 依赖业务组件, 可实现业务组件的代码在编译时对宿主 App 不可见, 仅在运行时对宿主 App 可见
         runtimeOnly project(':app_home')
     }
-    implementation project(':lib_component')
     implementation project(':lib_easynavigation')
 
     kapt "com.alibaba:arouter-compiler:$depv.arouter_compiler"

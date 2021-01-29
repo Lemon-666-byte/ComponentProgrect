@@ -6,8 +6,7 @@
 //////////////////依赖库版本号//////////////////
 def depv = [:]
 //support
-//depv.appcompat = '1.2.0-rc02'
-depv.appcompat = '1.3.0-alpha02'
+depv.appcompat = '1.2.0'
 depv.material = '1.2.1'
 depv.okhttp = '4.9.0'
 depv.gson = '2.8.6'
