@@ -2,7 +2,6 @@ package com.app.main
 
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.net.Uri
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter

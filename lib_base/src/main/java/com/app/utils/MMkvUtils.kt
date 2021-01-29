@@ -9,7 +9,7 @@ class MMkvUtils private constructor() {
 
     companion object {
         @JvmStatic
-        val INSTANCE: MMkvUtils by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+        val instance: MMkvUtils by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
             MMkvUtils()
         }
     }
