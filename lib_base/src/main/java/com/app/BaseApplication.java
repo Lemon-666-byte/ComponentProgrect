@@ -5,7 +5,6 @@ import android.app.Application;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.app.utils.BuildConfig;
 import com.blankj.utilcode.util.Utils;
-import com.getkeepsafe.relinker.ReLinker;
 import com.tencent.mmkv.MMKV;
 import com.tencent.smtt.sdk.QbSdk;
 
@@ -61,7 +60,7 @@ public abstract class BaseApplication extends Application {
     }
 
     private void initMMkv() {
-        String dir = getFilesDir().getAbsolutePath() + "/mmkv";
+//        String dir = getFilesDir().getAbsolutePath() + "/mmkv";
         MMKV.initialize(this);
 //        MMKV.initialize(dir, libName -> {
 ////            com.blankj.utilcode.util.LogUtils.e("MMKV", "mmkv libName: " + libName);
