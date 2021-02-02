@@ -1,9 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.app.utils">
-    <permission
-        android:name="com.app.micaihu.permission.MIPUSH_RECEIVE"
-        android:protectionLevel="signature" />
 
     <!-- 开机启动权限 -->
     <supports-screens
