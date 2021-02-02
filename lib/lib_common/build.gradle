@@ -22,20 +22,6 @@ android {
                 }
             }
         }
-        buildTypes {
-            debug {
-                minifyEnabled false
-                buildConfigField "boolean", "LOG_DEBUG", "false"
-                buildConfigField "String", "HOST", props["HOST_DEBUG"]
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            }
-            release {
-                buildConfigField "boolean", "LOG_DEBUG", "false"
-                buildConfigField "String", "HOST", props["HOST_RELEASE"]
-                minifyEnabled true
-                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            }
-        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
