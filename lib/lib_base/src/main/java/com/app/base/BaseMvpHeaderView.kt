@@ -1,13 +1,9 @@
 package com.app.base
 
 import android.content.Context
-import android.view.View
-import android.widget.LinearLayout
 import autodispose2.AutoDisposeConverter
 import com.app.base.mvp.BasePresenter
 import com.app.base.mvp.BaseView
-import com.app.http.RxLifecycleUtils
-import com.blankj.utilcode.util.ActivityUtils
 
 /**
  * header

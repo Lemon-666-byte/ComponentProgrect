@@ -9,7 +9,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.app.utils.R
+import com.app.base.R
 
 /**
  * @Description:自定义title

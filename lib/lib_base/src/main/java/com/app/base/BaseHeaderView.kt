@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.Resources
 import android.view.View
 import android.widget.LinearLayout
-import com.app.config.BaseConfigs
 import com.blankj.utilcode.util.AdaptScreenUtils
 
 /**

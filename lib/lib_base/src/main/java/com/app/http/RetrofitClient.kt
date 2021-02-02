@@ -1,10 +1,9 @@
 package com.app.http
 
-import android.os.Build.HOST
+import com.app.base.BuildConfig
 import com.app.http.interceptor.HeadIntercept
 import com.app.http.interceptor.LoggingInterceptor
 import com.app.http.interceptor.TokenInterceptor
-import com.app.utils.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
@@ -15,7 +14,6 @@ import androidx.fragment.app.Fragment
 import autodispose2.AutoDisposeConverter
 import com.app.base.mvp.BaseView
 import com.app.http.RxLifecycleUtils
-import com.app.utils.R
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.SizeUtils
 

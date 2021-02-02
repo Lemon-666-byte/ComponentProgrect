@@ -3,7 +3,7 @@ package com.app.widget.dialog
 import android.os.Bundle
 import android.view.View
 import com.app.base.BaseDialogFragment
-import com.app.utils.R
+import com.app.base.R
 
 /**
  * @date 2018-06-25

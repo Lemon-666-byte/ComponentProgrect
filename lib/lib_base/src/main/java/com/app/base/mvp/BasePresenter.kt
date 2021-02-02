@@ -3,7 +3,6 @@ package com.app.base.mvp
 import com.app.http.NetObserver
 import com.app.http.NetRequestListener
 import com.app.http.RxLifecycleUtils
-import com.blankj.utilcode.util.LogUtils
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableTransformer
 import java.lang.ref.WeakReference

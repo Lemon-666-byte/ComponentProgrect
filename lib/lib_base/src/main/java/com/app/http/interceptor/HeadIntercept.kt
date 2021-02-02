@@ -1,6 +1,6 @@
 package com.app.http.interceptor
 
-import com.app.utils.BuildConfig
+import com.app.base.BuildConfig
 import com.app.utils.biz.Biz
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType

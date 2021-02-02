@@ -1,6 +1,6 @@
 package com.app.http.interceptor
 
-import com.app.utils.BuildConfig
+import com.app.base.BuildConfig
 import com.blankj.utilcode.util.LogUtils
 import okhttp3.*
 import okio.Buffer

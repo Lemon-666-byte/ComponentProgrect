@@ -1,6 +1,5 @@
 package com.app.utils.biz
 
-import com.app.config.MMkvConfigs
 import com.app.utils.MMkvUtils
 
 /**
@@ -16,15 +15,15 @@ class Biz private constructor() {
     }
 
     var uid: String
-        get() = MMkvUtils.instance.getString(MMkvConfigs.UserData.uid)
+        get() = MMkvUtils.instance.getString(UserConfigs.uid)
         set(userInfo) {
-            MMkvUtils.instance.putString(MMkvConfigs.UserData.uid, userInfo)
+            MMkvUtils.instance.putString(UserConfigs.uid, userInfo)
         }
 
     var token: String
-        get() = MMkvUtils.instance.getString(MMkvConfigs.UserData.token)
+        get() = MMkvUtils.instance.getString(UserConfigs.token)
         set(userTask) {
-            MMkvUtils.instance.putString(MMkvConfigs.UserData.token, userTask)
+            MMkvUtils.instance.putString(UserConfigs.token, userTask)
         }
 
 }

@@ -1,4 +1,4 @@
-package com.app.config
+package com.app.base
 
 /**
  * BaseConfigs 保存的key

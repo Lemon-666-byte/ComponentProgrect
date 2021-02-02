@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.app.utils.R;
+import com.app.base.R;
 import com.chad.library.adapter.base.loadmore.BaseLoadMoreView;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 

@@ -13,8 +13,6 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.launcher.ARouter
-import com.app.config.BaseConfigs
-import com.app.utils.R
 import com.app.widget.CommonTitle
 import com.blankj.utilcode.util.*
 
