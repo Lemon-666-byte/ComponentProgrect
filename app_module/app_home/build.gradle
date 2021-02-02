@@ -8,11 +8,10 @@ apply plugin: 'kotlin-kapt'
 android {
     resourcePrefix "home_" //给 Module 内的资源名增加前缀, 避免资源名冲突
     compileSdkVersion buildv.compile_sdk
-    File propFile = file('../config.properties')
+    File propFile = new File(rootDir.getAbsoluteFile(), 'config.properties')
     if (propFile.exists()) {
         Properties props = new Properties()
         props.load(new InputStreamReader(new FileInputStream(propFile), "utf-8"))
-
         defaultConfig {
             if (isRunAlone.toBoolean()) {
                 // 单独调试时添加 applicationId ，集成调试时移除
@@ -69,7 +68,6 @@ android {
             }
         }
     }
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
