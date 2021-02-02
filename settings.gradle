@@ -1,1 +1,1 @@
-include ':app',':app_home', ':lib_base',':lib_component',':lib_easynavigation'
+include ':app',':app_home', ':lib_common'
