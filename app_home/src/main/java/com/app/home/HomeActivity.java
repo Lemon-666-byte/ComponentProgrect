@@ -1,16 +1,21 @@
 package com.app.home;
 
+import android.view.View;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.app.base.BaseActivity;
 import com.app.config.PathConfig;
+import com.app.home.databinding.HomeActivityBinding;
 import com.app.home.fragment.HomeFragment;
 import com.blankj.utilcode.util.FragmentUtils;
 
 @Route(path = PathConfig.Home.HomeActivity)
 public class HomeActivity extends BaseActivity {
+    HomeActivityBinding binding;
     @Override
-    protected int getLayoutId() {
-        return R.layout.home_activity;
+    protected View getLayoutId() {
+        binding=HomeActivityBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
     }
 
     @Override

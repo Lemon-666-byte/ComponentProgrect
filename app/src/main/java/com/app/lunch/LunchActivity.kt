@@ -8,6 +8,7 @@ import com.app.base.BaseActivity
 import com.app.config.PathConfig
 import com.app.http.RxSchedulers
 import com.app.test.R
+import com.app.test.databinding.LunchActivityBinding
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.LogUtils
 import io.reactivex.rxjava3.core.Observable
@@ -18,12 +19,15 @@ import java.util.concurrent.TimeUnit
  * 软件启动页面
  */
 class LunchActivity : BaseActivity() {
+
+    private val binding by lazy { LunchActivityBinding.inflate(layoutInflater) }
+
     override fun initBar(initBar: Boolean) {
         super.initBar(false)
         BarUtils.transparentStatusBar(this)
     }
 
-    override fun getLayoutId() = R.layout.lunch_activity
+    override fun getLayoutId() = binding.root
 
     var delaySubscribe: Disposable? = null
 

@@ -2,19 +2,24 @@ package com.app.main
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.view.View
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.app.base.BaseActivity
 import com.app.config.EventConfigs
 import com.app.config.PathConfig
 import com.app.test.R
+import com.app.test.databinding.MainActivityBinding
 import com.blankj.utilcode.util.LogUtils
 import com.jeremyliao.liveeventbus.LiveEventBus
 
 
 @Route(path = PathConfig.Main.MainActivity)
 class MainActivity : BaseActivity() {
-    override fun getLayoutId() = R.layout.main_activity
+
+    private val binding: MainActivityBinding by lazy { MainActivityBinding.inflate(layoutInflater) }
+
+    override fun getLayoutId() = binding.root
 
     override fun initBar(initBar: Boolean) {
         super.initBar(false)

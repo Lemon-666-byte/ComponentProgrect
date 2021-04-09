@@ -32,8 +32,7 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
      */
     private var commonTitle: CommonTitle? = null
 
-    @LayoutRes
-    protected abstract fun getLayoutId(): Int
+    protected abstract fun getLayoutId(): View
 
     open fun getBundle(bundle: Bundle) {}
 
