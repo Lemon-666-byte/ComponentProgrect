@@ -28,7 +28,6 @@ class MainActivity : BaseActivity() {
     override fun setData() {
 //        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
-//
         LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        val testDialog: TestDialog = TestDialog()
 //        testDialog.show(supportFragmentManager)
