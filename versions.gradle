@@ -33,7 +33,7 @@ def buildv = [:]
 buildv.min_sdk = 21//修改需谨慎
 buildv.target_sdk = 29//修改需谨慎
 buildv.compile_sdk = 29  //这个必须和 appcompat、design 版本一致
-buildv.gradle_tools = '4.1.3'//gradle build tools
+buildv.gradle_tools = '4.2.2'//gradle build tools
 
 ext.depv = depv
 ext.buildv = buildv
