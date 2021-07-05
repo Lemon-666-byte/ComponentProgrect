@@ -11,7 +11,6 @@ public class NoScrollGridView extends GridView {
 
     public NoScrollGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        // TODO Auto-generated constructor stub
     }
 
     @Override

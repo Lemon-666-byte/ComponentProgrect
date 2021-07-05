@@ -23,7 +23,7 @@ class MMkvUtils private constructor() {
     }
 
     fun getString(key: String): String {
-        return MMKV.defaultMMKV()?.decodeString(key, "") ?: ""
+        return getString(key,"")
     }
 
     fun putInt(key: String, value: Int) {
@@ -35,7 +35,7 @@ class MMkvUtils private constructor() {
     }
 
     fun getInt(key: String): Int {
-        return MMKV.defaultMMKV()?.decodeInt(key, -1) ?: -1
+        return getInt(key,-1)
     }
 
     fun putBoolean(key: String, value: Boolean) {
@@ -47,6 +47,6 @@ class MMkvUtils private constructor() {
     }
 
     fun getBoolean(key: String): Boolean {
-        return MMKV.defaultMMKV()?.decodeBool(key, false) ?: false
+        return getBoolean(key,false)
     }
 }
