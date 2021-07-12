@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'walle'
 }
 
 android {
@@ -105,14 +104,4 @@ dependencies {
     implementation project(':lib:lib_common')
 
     kapt "com.alibaba:arouter-compiler:$depv.arouter_compiler"
-}
-walle {
-    // 指定渠道包的输出路径
-    apkOutputFolder = new File("${project.getProjectDir()}/channels/channels");
-
-    // 定制渠道包的APK的文件名称
-    apkFileNameFormat = '${appName}-test-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
-    // 渠道配置文件
-//    channelFile = new File("${project.getProjectDir()}/channels/channel") //内部升级 渠道
-    channelFile = new File("${project.getProjectDir()}/channels/channelw") //内部升级 渠道
 }

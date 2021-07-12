@@ -34,8 +34,4 @@ abstract class BaseHeaderView(context: Context) : LinearLayout(context), View.On
         this.addView(thisView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
 
     }
-
-    override fun getResources(): Resources {
-        return AdaptScreenUtils.adaptWidth(super.getResources(), BaseConfigs.Screen.designWidth)
-    }
 }

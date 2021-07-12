@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingTop="@dimen/pt_100">
+    android:paddingTop="@dimen/dp_100">
 
     <ImageView
         android:id="@+id/ivEmptyView"
@@ -18,7 +18,7 @@
         android:id="@+id/tvEmptyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/pt_15"
+        android:layout_marginTop="@dimen/dp_15"
         android:contentDescription="@null"
         android:gravity="center_horizontal"
         android:text="@string/empty_no_data"

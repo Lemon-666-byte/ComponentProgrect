@@ -33,7 +33,6 @@ class MainActivity : BaseActivity() {
 //        testDialog.show(supportFragmentManager)
 //        showTwo()
 
-
     }
 
 

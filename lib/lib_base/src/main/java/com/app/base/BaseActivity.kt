@@ -100,37 +100,8 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
     override fun btnConfirmOnClick() {
     }
 
-    protected open fun enterPager(actClass: Class<*>) {
-        val intent = Intent()
-        intent.setClass(this, actClass)
-        ActivityUtils.startActivity(intent)
-    }
-
-    protected open fun enterPagerForResult(actClass: Class<*>, resultCode: Int) {
-        val intent = Intent()
-        intent.setClass(this, actClass)
-        ActivityUtils.startActivityForResult(this, intent, resultCode)
-    }
-
-    protected open fun enterPager(actClass: Class<*>, bundle: Bundle) {
-        val intent = Intent()
-        intent.setClass(this, actClass)
-        intent.putExtras(bundle)
-        ActivityUtils.startActivity(intent)
-    }
-
-    protected open fun enterPagerForResult(actClass: Class<*>, bundle: Bundle, resultCode: Int) {
-        val intent = Intent()
-        intent.setClass(this, actClass)
-        intent.putExtras(bundle)
-        ActivityUtils.startActivityForResult(this, intent, resultCode)
-    }
-
     fun getCommonTitle(): CommonTitle {
         return this.commonTitle!!
     }
 
-    override fun getResources(): Resources {
-        return AdaptScreenUtils.adaptWidth(super.getResources(), BaseConfigs.Screen.designWidth)
-    }
 }

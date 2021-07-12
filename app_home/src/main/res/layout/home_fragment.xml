@@ -8,9 +8,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/pt_100"
+        android:layout_marginTop="@dimen/dp_100"
         android:gravity="center"
-        android:padding="@dimen/pt_50"
+        android:padding="@dimen/dp_50"
         android:text="Home" />
 </RelativeLayout>
 

@@ -83,8 +83,6 @@ dependencies {
     api "com.uber.autodispose2:autodispose-androidx-lifecycle:$depv.autodispose"
 //    api "com.gyf.immersionbar:immersionbar:$depv.immersionbar"
 
-    api "com.meituan.android.walle:library:$depv.plugin_walle"
-
     api 'com.scwang.smart:refresh-layout-kernel:2.0.1'
 
     api 'com.github.HuanTanSheng:EasyPhotos:3.0.6'

@@ -42,15 +42,10 @@ class LunchActivity : BaseActivity() {
 
     }
 
-    override fun onPause() {
-        super.onPause()
-        delaySubscribe?.dispose()
-    }
 
     override fun onDestroy() {
         super.onDestroy()
         delaySubscribe?.dispose()
-
     }
 
     private fun toMain() {
