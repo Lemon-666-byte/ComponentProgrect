@@ -1,4 +1,4 @@
-package com.app.http.interceptor
+package com.app.net.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

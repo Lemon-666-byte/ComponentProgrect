@@ -6,8 +6,7 @@ import com.alibaba.android.arouter.facade.callback.NavigationCallback
 import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
 import com.app.config.PathConfig
-import com.app.http.RxSchedulers
-import com.app.test.R
+import com.app.net.RxSchedulers
 import com.app.test.databinding.LunchActivityBinding
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.LogUtils
@@ -39,7 +38,6 @@ class LunchActivity : BaseActivity() {
     }
 
     override fun addListeners() {
-
     }
 
 

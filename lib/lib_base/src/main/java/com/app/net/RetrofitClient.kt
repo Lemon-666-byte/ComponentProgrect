@@ -1,9 +1,9 @@
-package com.app.http
+package com.app.net
 
 import com.app.base.BuildConfig
-import com.app.http.interceptor.HeadIntercept
-import com.app.http.interceptor.LoggingInterceptor
-import com.app.http.interceptor.TokenInterceptor
+import com.app.net.interceptor.HeadIntercept
+import com.app.net.interceptor.LoggingInterceptor
+import com.app.net.interceptor.TokenInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

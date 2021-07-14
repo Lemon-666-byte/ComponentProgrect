@@ -19,7 +19,7 @@ android {
             //指定room.schemaLocation生成的文件路径
             javaCompileOptions {
                 annotationProcessorOptions {
-                    arguments = ["room.schemaLocation": "$projectDir/schemas".toString(), "AROUTER_MODULE_NAME": project.getName()]
+                    arguments = [ "AROUTER_MODULE_NAME": project.getName()]
                 }
             }
         }
@@ -93,13 +93,6 @@ dependencies {
 
     api 'com.tencent:mmkv-static:1.2.9'
 //    api 'com.getkeepsafe.relinker:relinker:1.4.1'
-
-    //room
-    api "androidx.room:room-runtime:$depv.room"
-    api "androidx.room:room-rxjava2:$depv.room"
-    api "androidx.room:room-ktx:$depv.room"
-    kapt "androidx.room:room-compiler:$depv.room_compiler"
-
     api project(':module_db')
 }
 

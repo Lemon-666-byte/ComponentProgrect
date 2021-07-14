@@ -9,8 +9,11 @@ import com.app.base.BaseActivity;
 import com.app.config.PathConfig;
 import com.app.home.databinding.HomeActivityBinding;
 import com.app.home.fragment.HomeFragment;
+import com.app.room.bean.Task;
 import com.app.room.utils.DBUtils;
 import com.blankj.utilcode.util.FragmentUtils;
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.ThreadUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -32,6 +35,22 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected void addListeners() {
+        //测试数据库
+//        ThreadUtils.executeByCached(new ThreadUtils.SimpleTask<String>() {
+//            @Override
+//            public String doInBackground() throws Throwable {
+//                Task task = new Task();
+//                task.setTaskId("9876");
+//                DBUtils.getInstance().getDB().taskDao().insert(task);
+//                return task.getTaskId();
+//            }
+//
+//            @Override
+//            public void onSuccess(String result) {
+//                LogUtils.e(result);
+//            }
+//        });
+
 
     }
 }

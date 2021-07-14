@@ -1,4 +1,4 @@
-package com.app.http.download;
+package com.app.net.download;
 
 import android.os.Environment;
 

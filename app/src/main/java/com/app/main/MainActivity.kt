@@ -10,9 +10,12 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
 import com.app.config.EventConfigs
 import com.app.config.PathConfig
+import com.app.room.bean.Task
+import com.app.room.utils.DBUtils
 import com.app.test.R
 import com.app.test.databinding.MainActivityBinding
 import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.ThreadUtils
 import com.jeremyliao.liveeventbus.LiveEventBus
 
 
@@ -29,13 +32,28 @@ class MainActivity : BaseActivity() {
 
     override fun setData() {
 
-        getEmptyView()
 //        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
-        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })
+        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
+            .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        val testDialog: TestDialog = TestDialog()
 //        testDialog.show(supportFragmentManager)
 //        showTwo()
+
+//        ThreadUtils.executeByIo(object : ThreadUtils.SimpleTask<String>() {
+//            override fun doInBackground(): String {
+//                val task = Task()
+//                task.taskId = "123456"
+//                DBUtils.getInstance().db.taskDao().insert(task)
+//                return task.taskId
+//            }
+//
+//            override fun onSuccess(result: String?) {
+//                LogUtils.e(result)
+//            }
+//
+//        })
+
 
     }
 
@@ -57,9 +75,13 @@ class MainActivity : BaseActivity() {
      */
     private fun showTwo() {
         val builder = AlertDialog.Builder(this).setIcon(R.mipmap.ic_launcher).setTitle("最普通dialog")
-                .setMessage("我是最简单的dialog").setPositiveButton("确定（积极）", DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
+            .setMessage("我是最简单的dialog").setPositiveButton(
+                "确定（积极）",
+                DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
                     Toast.makeText(this@MainActivity, "确定按钮", Toast.LENGTH_LONG).show()
-                }).setNegativeButton("取消（消极）", DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
+                }).setNegativeButton(
+                "取消（消极）",
+                DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
                     Toast.makeText(this@MainActivity, "关闭按钮", Toast.LENGTH_LONG).show()
                     dialogInterface.dismiss()
                 })

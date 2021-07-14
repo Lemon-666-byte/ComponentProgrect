@@ -1,4 +1,4 @@
-package com.app.http
+package com.app.net
 
 /**
  * @author Finn

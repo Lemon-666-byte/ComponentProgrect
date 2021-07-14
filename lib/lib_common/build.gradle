@@ -33,6 +33,5 @@ dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api project(':lib:lib_base')
 
-
 }
 

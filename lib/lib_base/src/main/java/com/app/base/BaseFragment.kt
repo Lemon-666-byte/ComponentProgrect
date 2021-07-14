@@ -13,7 +13,7 @@ import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import autodispose2.AutoDisposeConverter
 import com.app.base.mvp.BaseView
-import com.app.http.RxLifecycleUtils
+import com.app.net.RxLifecycleUtils
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.SizeUtils
 

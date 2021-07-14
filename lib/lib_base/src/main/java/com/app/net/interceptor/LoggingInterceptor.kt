@@ -1,4 +1,4 @@
-package com.app.http.interceptor
+package com.app.net.interceptor
 
 import com.app.base.BuildConfig
 import com.blankj.utilcode.util.LogUtils

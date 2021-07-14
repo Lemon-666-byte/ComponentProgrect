@@ -5,7 +5,7 @@ import android.os.Environment;
 public class Constants {
 
     public static final String SDPATH = Environment.getExternalStorageDirectory().getPath();
-    public static final String DATABASE_NAME = "inspect_db.db";
+
 
 
     public static class MapType {

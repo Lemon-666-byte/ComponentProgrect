@@ -1,4 +1,4 @@
-package com.app.http
+package com.app.net
 
 import com.blankj.utilcode.util.LogUtils
 import io.reactivex.rxjava3.annotations.NonNull

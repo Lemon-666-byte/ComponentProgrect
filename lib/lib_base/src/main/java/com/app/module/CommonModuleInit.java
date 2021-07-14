@@ -6,6 +6,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 
 import com.app.BaseApplication;
 import com.app.base.BuildConfig;
+import com.app.room.utils.DBUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.Utils;
 import com.tencent.mmkv.MMKV;
@@ -18,12 +19,16 @@ import com.tencent.smtt.sdk.QbSdk;
  * Description:
  */
 public class CommonModuleInit implements IModuleInit {
+
+    public static final String DATABASE_NAME = "inspect.db";
+
     @Override
     public boolean onInitAhead(Application application) {
         Utils.init(application);
         initARouter(application);
         initMMkv(application);
         initX5(application);
+        DBUtils.getInstance().init(application, DATABASE_NAME);
         LogUtils.e("HomeApp", "HomeApp onInitAhead()");
         return false;
     }

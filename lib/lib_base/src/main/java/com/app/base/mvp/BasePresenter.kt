@@ -1,8 +1,8 @@
 package com.app.base.mvp
 
-import com.app.http.NetObserver
-import com.app.http.NetRequestListener
-import com.app.http.RxLifecycleUtils
+import com.app.net.NetObserver
+import com.app.net.NetRequestListener
+import com.app.net.RxLifecycleUtils
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableTransformer
 import java.lang.ref.WeakReference

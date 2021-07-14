@@ -3,7 +3,7 @@ package com.app.base
 import autodispose2.AutoDisposeConverter
 import com.app.base.mvp.BasePresenter
 import com.app.base.mvp.BaseView
-import com.app.http.RxLifecycleUtils
+import com.app.net.RxLifecycleUtils
 import com.app.widget.dialog.LoadingDialog
 
 abstract class BaseMvpActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity(), BaseView {
