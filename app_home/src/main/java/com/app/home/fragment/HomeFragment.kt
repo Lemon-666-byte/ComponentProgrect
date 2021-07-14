@@ -5,8 +5,9 @@ import com.app.base.BaseFragment
 import com.app.config.PathConfig
 import com.app.home.R
 
-@Route(path = com.app.config.PathConfig.Home.HomeFragment)
+@Route(path = PathConfig.Home.HomeFragment)
 class HomeFragment : BaseFragment() {
+
     override fun getLayoutId() = R.layout.home_fragment
 
     override fun setData() {

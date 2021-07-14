@@ -18,7 +18,7 @@ android {
             versionName props['VERSION_NAME']
             multiDexEnabled true
             ndk {
-                abiFilters "armeabi"
+                abiFilters 'armeabi-v7a'
             }
             kapt {
                 arguments {

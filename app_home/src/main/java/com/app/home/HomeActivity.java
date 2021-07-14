@@ -9,12 +9,16 @@ import com.app.home.databinding.HomeActivityBinding;
 import com.app.home.fragment.HomeFragment;
 import com.blankj.utilcode.util.FragmentUtils;
 
+import org.jetbrains.annotations.NotNull;
+
 @Route(path = PathConfig.Home.HomeActivity)
 public class HomeActivity extends BaseActivity {
     HomeActivityBinding binding;
+
+    @NotNull
     @Override
     protected View getLayoutId() {
-        binding=HomeActivityBinding.inflate(getLayoutInflater());
+        binding = HomeActivityBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
 

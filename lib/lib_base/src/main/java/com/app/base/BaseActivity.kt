@@ -100,8 +100,8 @@ abstract class BaseActivity : AppCompatActivity(), CommonTitle.CommonTitleCallBa
     override fun btnConfirmOnClick() {
     }
 
-    fun getCommonTitle(): CommonTitle {
-        return this.commonTitle!!
+    fun getCommonTitle(): CommonTitle? {
+        return this.commonTitle
     }
 
 }

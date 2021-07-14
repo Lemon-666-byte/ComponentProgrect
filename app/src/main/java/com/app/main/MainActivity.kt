@@ -4,7 +4,9 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
 import com.app.config.EventConfigs
 import com.app.config.PathConfig
@@ -26,6 +28,8 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setData() {
+
+        getEmptyView()
 //        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
 //        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
         LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java).observe(this, { t -> LogUtils.e("aaaaaa->$t") })

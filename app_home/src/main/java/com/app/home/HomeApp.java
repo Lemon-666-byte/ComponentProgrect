@@ -10,12 +10,12 @@ public class HomeApp extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         initModuleApp(this);
-        LogUtils.e("BaseApplication", "HomeApp onCreate()");
+        LogUtils.e("HomeApp", "HomeApp onCreate()");
     }
 
     @Override
     public void initModuleApp(Application application) {
-
+        LogUtils.e("HomeApp", "HomeApp initModuleApp()");
     }
 
 }
