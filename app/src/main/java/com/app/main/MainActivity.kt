@@ -14,6 +14,7 @@ import com.app.room.bean.Task
 import com.app.room.utils.DBUtils
 import com.app.test.R
 import com.app.test.databinding.MainActivityBinding
+import com.blankj.utilcode.util.FragmentUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ThreadUtils
 import com.jeremyliao.liveeventbus.LiveEventBus
@@ -31,9 +32,8 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setData() {
-
-//        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
-//        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
+        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
+        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
         LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
             .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        val testDialog: TestDialog = TestDialog()
@@ -51,7 +51,6 @@ class MainActivity : BaseActivity() {
 //            override fun onSuccess(result: String?) {
 //                LogUtils.e(result)
 //            }
-//
 //        })
 
 

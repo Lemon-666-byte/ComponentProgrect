@@ -64,8 +64,7 @@ abstract class BaseFragment : Fragment(), BaseView {
     /**
      * 加载布局
      */
-    @LayoutRes
-    protected abstract fun getLayoutId(): Int
+    protected abstract fun getLayoutId(): View
 
     open fun getBundle(bundle: Bundle) {}
 
@@ -86,8 +85,7 @@ abstract class BaseFragment : Fragment(), BaseView {
     protected open fun stopLoad() {}
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        rootView = inflater.inflate(getLayoutId(), null)
-        return rootView
+        return getLayoutId()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
