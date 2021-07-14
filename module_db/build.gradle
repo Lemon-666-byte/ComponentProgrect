@@ -31,8 +31,7 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api project(':lib:lib_base')
-
+    api project(':lib:lib_common')
 
 }
 

@@ -1,7 +1,6 @@
 package com.app;
 
-import android.app.Application;
-
+import com.app.config.ModuleLifecycleConfig;
 import com.blankj.utilcode.util.LogUtils;
 
 public class App extends BaseApplication {
@@ -9,13 +8,8 @@ public class App extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        initModuleApp(this);
+        ModuleLifecycleConfig.getInstance().initModuleAhead(this);
         LogUtils.e("BaseApplication", "App onCreate()");
-    }
-
-    @Override
-    public void initModuleApp(Application application) {
-
     }
 
 
