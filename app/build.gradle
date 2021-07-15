@@ -104,6 +104,8 @@ dependencies {
         runtimeOnly project(':app_me')
     }
     implementation project(':lib:lib_common')
+
+    //https://github.com/Vincent7Wong/EasyNavigation
     implementation 'com.github.Vincent7Wong:EasyNavigation:2.0.5'
 
     kapt "com.alibaba:arouter-compiler:$depv.arouter_compiler"
