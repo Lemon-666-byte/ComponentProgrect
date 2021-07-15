@@ -9,6 +9,7 @@ import com.app.base.BaseActivity
 import com.app.config.PathConfig
 import com.app.test.R
 import com.app.test.databinding.MainActivityBinding
+import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ColorUtils
 import com.blankj.utilcode.util.LogUtils
 import com.next.easynavigation.view.EasyNavigationBar.OnTabClickListener
@@ -21,9 +22,12 @@ class MainActivity : BaseActivity() {
 
     override fun getLayoutId() = binding.root
 
-//    override fun initBar(initBar: Boolean) {
-//        super.initBar(false)
-//    }
+    override fun initBar(initBar: Boolean) {
+        super.initBar(false)
+
+        BarUtils.setStatusBarColor(this,ColorUtils.getColor(R.color.colorBlack000))
+        BarUtils.setStatusBarLightMode(this, true)
+    }
 
     override fun setData() {
         initFragments()

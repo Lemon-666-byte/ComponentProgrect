@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background"
+    android:background="@color/color333"
     android:orientation="vertical">
 
     <com.next.easynavigation.view.EasyNavigationBar
