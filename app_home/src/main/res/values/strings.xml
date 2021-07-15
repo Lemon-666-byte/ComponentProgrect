@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation,ResourceName">
 
-    <string name="app_name">Home</string>
+    <string name="app_name">主页</string>
 
 </resources>
