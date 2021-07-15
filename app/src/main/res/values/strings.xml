@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
 
-    <string name="app_name">Component</string>
+    <string name="app_name">电缆巡检</string>
 
 </resources>

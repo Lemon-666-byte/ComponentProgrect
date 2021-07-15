@@ -9,7 +9,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/icon"
             android:tileMode="disabled" />
     </item>
 
