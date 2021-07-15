@@ -33,7 +33,6 @@ class MainActivity : BaseActivity() {
         initFragments()
 //        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
 //            .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
-//        showTwo()
 //        ThreadUtils.executeByIo(object : ThreadUtils.SimpleTask<String>() {
 //            override fun doInBackground(): String {
 //                val task = Task()
