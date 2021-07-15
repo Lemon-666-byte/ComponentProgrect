@@ -1,15 +1,15 @@
-package com.app.home;
+package com.app.workbench;
 
 import com.app.BaseApplication;
 import com.app.config.ModuleLifecycleConfig;
 import com.blankj.utilcode.util.LogUtils;
 
-public class HomeApp extends BaseApplication {
+public class WorkbenchApp extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
         ModuleLifecycleConfig.getInstance().initModuleAhead(this);
-        LogUtils.e("App", "HomeApp onCreate()");
+        LogUtils.e("App", "WorkbenchApp onCreate()");
     }
 
 }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background">
+    android:background="@color/app_background"
+    tools:ignore="ResourceName">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,6 +13,6 @@
         android:layout_marginTop="@dimen/dp_100"
         android:gravity="center"
         android:padding="@dimen/dp_50"
-        android:text="首页" />
+        android:text="工作台" />
 </RelativeLayout>
 

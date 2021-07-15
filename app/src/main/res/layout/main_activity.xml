@@ -6,21 +6,11 @@
     android:background="@color/app_background"
     android:orientation="vertical">
 
-
-    <!--    </FrameLayout>-->
-    <FrameLayout
-        android:id="@+id/rlContent"
+    <com.next.easynavigation.view.EasyNavigationBar
+        android:id="@+id/navigationBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:layout_height="match_parent">
 
-
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/color666"
-        android:gravity="center"
-        android:text="Main" />
+    </com.next.easynavigation.view.EasyNavigationBar>
 </LinearLayout>
 

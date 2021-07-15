@@ -1,23 +1,17 @@
 package com.app.main
 
-import android.app.AlertDialog
-import android.content.DialogInterface
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
-import com.app.config.EventConfigs
 import com.app.config.PathConfig
-import com.app.room.bean.Task
-import com.app.room.utils.DBUtils
 import com.app.test.R
 import com.app.test.databinding.MainActivityBinding
-import com.blankj.utilcode.util.FragmentUtils
+import com.blankj.utilcode.util.ColorUtils
 import com.blankj.utilcode.util.LogUtils
-import com.blankj.utilcode.util.ThreadUtils
-import com.jeremyliao.liveeventbus.LiveEventBus
+import com.next.easynavigation.view.EasyNavigationBar.OnTabClickListener
 
 
 @Route(path = PathConfig.Main.MainActivity)
@@ -27,19 +21,15 @@ class MainActivity : BaseActivity() {
 
     override fun getLayoutId() = binding.root
 
-    override fun initBar(initBar: Boolean) {
-        super.initBar(false)
-    }
+//    override fun initBar(initBar: Boolean) {
+//        super.initBar(false)
+//    }
 
     override fun setData() {
-        val homeFragment = ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
-        FragmentUtils.add(supportFragmentManager, homeFragment, R.id.rlContent)
-        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
-            .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
-//        val testDialog: TestDialog = TestDialog()
-//        testDialog.show(supportFragmentManager)
+        initFragments()
+//        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
+//            .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        showTwo()
-
 //        ThreadUtils.executeByIo(object : ThreadUtils.SimpleTask<String>() {
 //            override fun doInBackground(): String {
 //                val task = Task()
@@ -69,21 +59,69 @@ class MainActivity : BaseActivity() {
 //        }
     }
 
+
     /**
-     * 两个按钮的 dialog
+     * 加载需要显示的内容
      */
-    private fun showTwo() {
-        val builder = AlertDialog.Builder(this).setIcon(R.mipmap.ic_launcher).setTitle("最普通dialog")
-            .setMessage("我是最简单的dialog").setPositiveButton(
-                "确定（积极）",
-                DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
-                    Toast.makeText(this@MainActivity, "确定按钮", Toast.LENGTH_LONG).show()
-                }).setNegativeButton(
-                "取消（消极）",
-                DialogInterface.OnClickListener { dialogInterface, i -> //ToDo: 你想做的事情
-                    Toast.makeText(this@MainActivity, "关闭按钮", Toast.LENGTH_LONG).show()
-                    dialogInterface.dismiss()
-                })
-        builder.create().show()
+    private fun initFragments() {
+        val fragments = ArrayList<Fragment>()
+        val homeFragment =
+            ARouter.getInstance().build(PathConfig.Home.HomeFragment).navigation() as Fragment
+        val workBenchFragment = ARouter.getInstance().build(PathConfig.WorkBench.WorkBenchFragment)
+            .navigation() as Fragment
+        val meFragment = ARouter.getInstance().build(PathConfig.Me.MeFragment)
+            .navigation() as Fragment
+        val tabText: Array<String> = arrayOf("首页", "工作台", "我")
+        //未选中icon
+        val normalIcon: IntArray = intArrayOf(
+            R.mipmap.ic_home,
+            R.mipmap.ic_gzt,
+            R.mipmap.ic_me,
+        )
+        //选中时icon
+        val selectIcon: IntArray = intArrayOf(
+            R.mipmap.ic_home,
+            R.mipmap.ic_gzt,
+            R.mipmap.ic_me,
+        )
+        fragments.add(homeFragment)
+        fragments.add(workBenchFragment)
+        fragments.add(meFragment)
+        binding.navigationBar.titleItems(tabText)
+            .normalIconItems(normalIcon)
+            .selectIconItems(selectIcon)
+            .fragmentList(fragments)
+            .normalTextColor(ColorUtils.getColor(R.color.colorWhite))
+            .selectTextColor(ColorUtils.getColor(R.color.colorBlue))
+            .tabTextSize(10) //                .anim(Anim.Pulse)
+            .navigationHeight(45) //导航栏高度
+            .iconSize(20f) //Tab图标大小
+            .canScroll(false)
+            .smoothScroll(true)
+            .lineColor(ColorUtils.getColor(R.color.colorD5D5D5))
+            .lineHeight(1)
+            .navigationBackground(ColorUtils.getColor(R.color.color979797))
+            .fragmentManager(supportFragmentManager)
+            .build()
+        val viewPager: ViewPager = binding.navigationBar.viewPager
+        viewPager.offscreenPageLimit = fragments.size
+
+        binding.navigationBar.onTabClickListener = object : OnTabClickListener {
+            override fun onTabSelectEvent(view: View?, position: Int): Boolean {
+                LogUtils.e("navigation", "选择了$position")
+                if (position == 2) {
+                    ARouter.getInstance().build(PathConfig.Me.MeActivity).navigation()
+                    return true
+                }
+                return false
+            }
+
+            override fun onTabReSelectEvent(view: View?, position: Int): Boolean {
+                LogUtils.e("navigation", "重复点击了$position")
+                return true
+            }
+
+        }
     }
+
 }

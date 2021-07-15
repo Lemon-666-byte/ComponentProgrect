@@ -1,5 +1,7 @@
 include ':app'
 include ':app_home'
+include ':app_workbench'
+include ':app_me'
 include ':module_db'
 include ':lib:lib_base'
 include ':lib:lib_common'

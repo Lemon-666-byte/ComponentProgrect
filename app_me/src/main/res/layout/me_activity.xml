@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     android:background="@color/app_background">
 
-    <TextView
+    <FrameLayout
+        android:id="@+id/rlContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_100"
-        android:gravity="center"
-        android:padding="@dimen/dp_50"
-        android:text="首页" />
+        android:layout_height="wrap_content" />
 </RelativeLayout>
 
