@@ -6,26 +6,18 @@ import android.provider.SyncStateContract;
 import androidx.room.Room;
 
 import com.app.room.AppDatabase;
+import com.blankj.utilcode.util.Utils;
 
 /**
  * 数据库工具类
  */
 public class DBUtils {
-
+    public static final String DATABASE_NAME = "inspect.db";
     private AppDatabase appDatabase;
     private static volatile DBUtils instance;
-    private Context context;
-    private String dbName;
 
     private DBUtils() {
 
-    }
-
-    public void init(Context context, String dbName) {
-        this.context = context.getApplicationContext();
-        this.dbName = dbName;
-        // create database
-        appDatabase = getDB();
     }
 
     public static DBUtils getInstance() {
@@ -41,7 +33,7 @@ public class DBUtils {
 
     public AppDatabase getDB() {
         if (appDatabase == null) {
-            appDatabase = Room.databaseBuilder(context, AppDatabase.class, dbName)
+            appDatabase = Room.databaseBuilder(Utils.getApp(), AppDatabase.class, DATABASE_NAME)
 //                            .addMigrations(MIGRATION_1_2)
 //                    INSTANCE = Room.databaseBuilder(Utils.getApp(), AppDatabase.class, Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + Constants.DATABASE_NAME)
                     .build();

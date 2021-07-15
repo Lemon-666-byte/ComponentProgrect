@@ -20,7 +20,7 @@ import com.tencent.smtt.sdk.QbSdk;
  */
 public class CommonModuleInit implements IModuleInit {
 
-    public static final String DATABASE_NAME = "inspect.db";
+
 
     @Override
     public boolean onInitAhead(Application application) {
@@ -28,7 +28,6 @@ public class CommonModuleInit implements IModuleInit {
         initARouter(application);
         initMMkv(application);
         initX5(application);
-        DBUtils.getInstance().init(application, DATABASE_NAME);
         LogUtils.e("HomeApp", "HomeApp onInitAhead()");
         return false;
     }

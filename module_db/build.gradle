@@ -33,6 +33,8 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
+    //工具类
+    implementation "com.blankj:utilcodex:$depv.utilcode"
     //room
     api "androidx.room:room-runtime:$depv.room"
     api "androidx.room:room-rxjava2:$depv.room"
