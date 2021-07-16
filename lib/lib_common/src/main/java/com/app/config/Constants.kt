@@ -1,19 +1,16 @@
-package com.app.config;
+package com.app.config
 
-import android.os.Environment;
+import android.os.Environment
 
-public class Constants {
+object Constants {
+    val SDPATH = Environment.getExternalStorageDirectory().path
 
-    public static final String SDPATH = Environment.getExternalStorageDirectory().getPath();
-
-
-
-    public static class MapType {
-        public static final String navi = "navi";// 导航
-        public static final String offline = "offline";// 离线
+    object MapType {
+        const val navi = "navi" // 导航
+        const val offline = "offline" // 离线
     }
 
-    public static class PackageName {
-        public static final String amap = "com.autonavi.minimap";// 高德
+    object PackageName {
+        const val amap = "com.autonavi.minimap" // 高德
     }
 }

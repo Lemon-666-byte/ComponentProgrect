@@ -1,57 +1,46 @@
-package com.app.config;
+package com.app.config
 
-public class PathConfig {
-    public class Login {
-
-        public static final String LoginActivity = "/login/LoginActivity";
-
+class PathConfig {
+    object Login {
+        const val LoginActivity = "/login/LoginActivity"
     }
 
-    public class Main {
+    object Main {
         /**
          *
          */
-        public static final String MainActivity = "/main/MainActivity";
+        const val MainActivity = "/main/MainActivity"
 
         /**
          *
          */
-        public static final String CommonWebViewActivity = "/main/CommonWebViewActivity";
+        const val CommonWebViewActivity = "/main/CommonWebViewActivity"
     }
 
-    public class Home {
+    object Home {
+        const val HomeActivity = "/home/HomeActivity"
 
-        public static final String HomeActivity = "/home/HomeActivity";
         /**
          *
          */
-        public static final String HomeFragment = "/home/HomeFragment";
+        const val HomeFragment = "/home/HomeFragment"
     }
 
-    public class WorkBench {
+    object WorkBench {
+        const val WorkBenchActivity = "/workbench/WorkBenchActivity"
 
-        public static final String WorkBenchActivity = "/workbench/WorkBenchActivity";
         /**
          *
          */
-        public static final String WorkBenchFragment = "/workbench/WorkBenchFragment";
+        const val WorkBenchFragment = "/workbench/WorkBenchFragment"
     }
 
-    public class Me {
+    object Me {
+        const val MeActivity = "/me/MeActivity"
 
-        public static final String MeActivity = "/me/MeActivity";
         /**
          *
          */
-        public static final String MeFragment = "/me/MeFragment";
+        const val MeFragment = "/me/MeFragment"
     }
-
-    public class Search {
-        /**
-         *
-         */
-        public static final String SearchActivity = "/search/SearchActivity";
-    }
-
-
 }
