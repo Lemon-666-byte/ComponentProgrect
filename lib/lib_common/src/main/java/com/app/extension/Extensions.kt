@@ -8,7 +8,6 @@ fun ImageView.loadImage(url: Any?) {
     url?.let {
         ImageLoadUtils.loadImage(it, this)
     }
-
 }
 
 fun ImageView.loadImageNoScaleType(url: Any?) {
@@ -26,6 +25,9 @@ fun ImageView.loadImage(url: Any?, @DrawableRes default: Int) {
     }
 }
 
+/**
+ * 圆形图片
+ */
 fun ImageView.loadCircleImage(url: Any?, @DrawableRes default: Int) {
     if (url == null) {
         ImageLoadUtils.loadCircleImage(default, this, default, default)
@@ -34,6 +36,9 @@ fun ImageView.loadCircleImage(url: Any?, @DrawableRes default: Int) {
     }
 }
 
+/**
+ * 圆形图片
+ */
 fun ImageView.loadCircleImage(url: Any?) {
     url?.let {
         ImageLoadUtils.loadCircleImage(it, this)
@@ -42,7 +47,7 @@ fun ImageView.loadCircleImage(url: Any?) {
 }
 
 /**
- * 圆形图片
+ * 圆角图片
  */
 fun ImageView.loadRadius(url: Any?, radius: Int) {
     url?.let {
@@ -51,7 +56,7 @@ fun ImageView.loadRadius(url: Any?, radius: Int) {
 }
 
 /**
- * 圆形图片
+ * 圆角图片
  */
 fun ImageView.loadRadius(url: Any?, radius: Int, @DrawableRes error: Int) {
     if (url == null) {
