@@ -1,6 +1,7 @@
 package com.app.login.activity
 
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
 import com.app.base.BaseMvpActivity
 import com.app.bean.login.Login
@@ -42,7 +43,8 @@ class LoginActivity : BaseMvpActivity<LoginContract.View, LoginPresenter>(), Log
             if (result.isSuccess()) {
                 result.data?.let {
                     MMkvUtils.instance.putString(MMkvConfigs.Login.loginName,it.name)
-//                    finish()
+                    ARouter.getInstance().build(PathConfig.Main.MainActivity).navigation()
+                    finish()
                 }
             }
         }
