@@ -47,26 +47,7 @@ class LunchActivity : BaseActivity() {
     }
 
     private fun toMain() {
-
-        ARouter.getInstance().build(PathConfig.Main.MainActivity).navigation(this, object : NavigationCallback {
-            override fun onFound(postcard: Postcard?) {
-                LogUtils.e(classTag, "onFound()")
-            }
-
-            override fun onLost(postcard: Postcard?) {
-                LogUtils.e(classTag, "onLost()")
-            }
-
-            override fun onArrival(postcard: Postcard?) {
-                LogUtils.e(classTag, "onArrival()")
-                finish()
-            }
-
-            override fun onInterrupt(postcard: Postcard?) {
-                LogUtils.e(classTag, "onInterrupt()")
-            }
-
-        })
+        ARouter.getInstance().build(PathConfig.Login.LoginActivity).navigation()
 
     }
 }

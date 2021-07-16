@@ -1,6 +1,11 @@
 package com.app.config;
 
 public class PathConfig {
+    public class Login {
+
+        public static final String LoginActivity = "/login/LoginActivity";
+
+    }
 
     public class Main {
         /**
@@ -31,6 +36,7 @@ public class PathConfig {
          */
         public static final String WorkBenchFragment = "/workbench/WorkBenchFragment";
     }
+
     public class Me {
 
         public static final String MeActivity = "/me/MeActivity";
@@ -39,6 +45,7 @@ public class PathConfig {
          */
         public static final String MeFragment = "/me/MeFragment";
     }
+
     public class Search {
         /**
          *

@@ -18,7 +18,7 @@ android {
             versionName props['VERSION_NAME']
             multiDexEnabled true
             ndk {
-                abiFilters 'armeabi-v7a'
+                abiFilters 'armeabi-v7a',"x86"
             }
             kapt {
                 arguments {
@@ -102,6 +102,7 @@ dependencies {
         runtimeOnly project(':app_home')
         runtimeOnly project(':app_workbench')
         runtimeOnly project(':app_me')
+        runtimeOnly project(':module_login')
     }
     implementation project(':lib:lib_common')
 

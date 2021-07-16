@@ -21,14 +21,13 @@ import com.tencent.smtt.sdk.QbSdk;
 public class CommonModuleInit implements IModuleInit {
 
 
-
     @Override
     public boolean onInitAhead(Application application) {
         Utils.init(application);
         initARouter(application);
         initMMkv(application);
         initX5(application);
-        LogUtils.e("HomeApp", "HomeApp onInitAhead()");
+        LogUtils.e("App", "CommonModuleInit onInitAhead()");
         return false;
     }
 
