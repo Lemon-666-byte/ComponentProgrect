@@ -34,6 +34,7 @@ class LoginActivity : BaseMvpActivity<LoginContract.View, LoginPresenter>(), Log
         }
     }
 
+
     override fun handleLogin(result: BaseBean<Login?>?) {
         if (result == null) {
             ToastUtils.showShort(getString(R.string.no_net_error))

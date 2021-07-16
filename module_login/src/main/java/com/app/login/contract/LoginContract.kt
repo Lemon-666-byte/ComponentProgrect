@@ -6,12 +6,11 @@ import com.app.net.bean.BaseBean
 
 
 /**
- *创建军团
+ *登录
  */
 interface LoginContract {
     interface View : BaseView {
         fun handleLogin(result: BaseBean<Login?>?) {}
-
     }
 
     interface Presenter {
