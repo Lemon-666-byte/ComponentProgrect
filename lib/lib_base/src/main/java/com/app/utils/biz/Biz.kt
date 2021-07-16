@@ -15,15 +15,15 @@ class Biz private constructor() {
     }
 
     var uid: String
-        get() = MMkvUtils.instance.getString(UserConfigs.uid)
+        get() = MMkvUtils.getInstance.getString(UserConfigs.uid)
         set(userInfo) {
-            MMkvUtils.instance.putString(UserConfigs.uid, userInfo)
+            MMkvUtils.getInstance.putString(UserConfigs.uid, userInfo)
         }
 
     var token: String
-        get() = MMkvUtils.instance.getString(UserConfigs.token)
+        get() = MMkvUtils.getInstance.getString(UserConfigs.token)
         set(userTask) {
-            MMkvUtils.instance.putString(UserConfigs.token, userTask)
+            MMkvUtils.getInstance.putString(UserConfigs.token, userTask)
         }
 
 }
