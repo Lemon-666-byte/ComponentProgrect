@@ -1,8 +1,8 @@
 package com.app.login.contract
 
 import com.app.base.mvp.BaseView
-import com.app.bean.login.Login
-import com.app.net.bean.BaseBean
+import com.app.common.bean.base.BaseBean
+import com.app.common.bean.login.Login
 
 
 /**
@@ -10,7 +10,8 @@ import com.app.net.bean.BaseBean
  */
 interface LoginContract {
     interface View : BaseView {
-        fun handleLogin(result: BaseBean<Login?>?) {}
+        fun handleLogin(result: Login?) {}
+        fun handleGetSM2PubK(result: BaseBean<String?>?) {}
     }
 
     interface Presenter {
@@ -20,7 +21,13 @@ interface LoginContract {
          * @param name 用户名称
          * @param password 用户密码
          */
-        fun login(name: String, password: String)
+        fun onGetSM2PubK(name: String, password: String)
+        /**
+         * 获取sm2公钥
+         * @param name 用户名称
+         * @param password 用户密码
+         */
+        fun login(name: String, password: String,mobileLogin: Boolean)
 
 
     }

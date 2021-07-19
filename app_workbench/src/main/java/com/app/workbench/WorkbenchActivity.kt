@@ -2,7 +2,7 @@ package com.app.workbench
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.app.base.BaseActivity
-import com.app.config.PathConfig
+import com.app.common.config.PathConfig
 import com.app.workbench.databinding.WorkbenchActivityBinding
 import com.app.workbench.fragment.WorkbenchFragment
 import com.blankj.utilcode.util.FragmentUtils

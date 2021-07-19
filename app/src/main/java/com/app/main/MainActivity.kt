@@ -7,7 +7,7 @@ import androidx.viewpager.widget.ViewPager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
-import com.app.config.PathConfig
+import com.app.common.config.PathConfig
 import com.app.test.R
 import com.app.test.databinding.MainActivityBinding
 import com.blankj.utilcode.util.BarUtils

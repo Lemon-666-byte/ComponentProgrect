@@ -1,6 +1,6 @@
-package com.app.utils.net
+package com.app.net.utils
 
-import com.app.api.ApiLogin
+import com.app.common.api.ApiLogin
 import com.app.net.RetrofitClient
 
 

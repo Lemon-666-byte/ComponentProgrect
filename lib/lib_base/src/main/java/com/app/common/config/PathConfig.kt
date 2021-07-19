@@ -1,8 +1,9 @@
-package com.app.config
+package com.app.common.config
 
 class PathConfig {
     object Login {
         const val LoginActivity = "/login/LoginActivity"
+        const val LoginConfigActivity = "/login/LoginConfigActivity"
     }
 
     object Main {

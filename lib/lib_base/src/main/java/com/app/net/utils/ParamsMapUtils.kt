@@ -1,4 +1,4 @@
-package com.app.utils.net
+package com.app.net.utils
 
 import androidx.collection.ArrayMap
 

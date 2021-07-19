@@ -1,4 +1,4 @@
-package com.app.config
+package com.app.common.config
 
 /**
  * EventConfigs 保存的key

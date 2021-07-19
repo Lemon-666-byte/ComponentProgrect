@@ -1,4 +1,4 @@
-package com.app.config;
+package com.app.common.config;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Interceptor;
 import com.alibaba.android.arouter.facade.callback.InterceptorCallback;
 import com.alibaba.android.arouter.facade.template.IInterceptor;
-import com.app.utils.biz.Biz;
+import com.app.common.utils.biz.Biz;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;

@@ -1,6 +1,6 @@
 package com.app.net
 
-import com.app.base.BuildConfig
+import com.app.common.config.MMkvConfigs
 import com.app.net.interceptor.HeadIntercept
 import com.app.net.interceptor.LoggingInterceptor
 import com.app.net.interceptor.TokenInterceptor
@@ -48,28 +48,29 @@ class RetrofitClient {
 
     init {
         val okHttpClient = OkHttpClient.Builder()
-                .addInterceptor(headerInterceptor) //设置Header
-                .addInterceptor(interceptor) //设置拦截器
-                .addInterceptor(tokenInterceptor)
-                .connectTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
-                .retryOnConnectionFailure(true)
-                .build()
+            .addInterceptor(headerInterceptor) //设置Header
+            .addInterceptor(interceptor) //设置拦截器
+            .addInterceptor(tokenInterceptor)
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(10, TimeUnit.SECONDS)
+            .writeTimeout(10, TimeUnit.SECONDS)
+            .retryOnConnectionFailure(true)
+            .build()
         okHttpClient.dispatcher.maxRequestsPerHost = 20
         retrofit = Retrofit.Builder()
-                .client(okHttpClient)
-                .baseUrl(BuildConfig.HOST)
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-                .build()
+            .client(okHttpClient)
+//            .baseUrl(BuildConfig.HOST)
+            .baseUrl(getBaseUrl())
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+            .build()
     }
 
 
-//    fun getBaseUrl(): String? {
-//        val serverIp: String = MMkvUtils.getString(MMkvC)
-//        val serverPort: String = MMkvUtils.getString("serverPort")
-        //        String loginUrl = "http://lrnimo.utools.club";//楚凡外网
-//        return "http://$serverIp:$serverPort"
-//    }
+    private fun getBaseUrl(): String {
+        val serverIp: String = MMkvUtils.getString(MMkvConfigs.BaseUrl.serverIp)
+        val serverPort: String = MMkvUtils.getString(MMkvConfigs.BaseUrl.serverPort)
+//        String loginUrl = "http://lrnimo.utools.club";//楚凡外网
+        return "http://$serverIp:$serverPort"
+    }
 }

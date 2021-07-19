@@ -1,15 +1,12 @@
 package com.app.lunch
 
 import android.annotation.SuppressLint
-import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.facade.callback.NavigationCallback
 import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseActivity
-import com.app.config.PathConfig
+import com.app.common.config.PathConfig
 import com.app.net.RxSchedulers
 import com.app.test.databinding.LunchActivityBinding
 import com.blankj.utilcode.util.BarUtils
-import com.blankj.utilcode.util.LogUtils
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.Disposable
 import java.util.concurrent.TimeUnit
@@ -48,6 +45,6 @@ class LunchActivity : BaseActivity() {
 
     private fun toMain() {
         ARouter.getInstance().build(PathConfig.Login.LoginActivity).navigation()
-
+        finish()
     }
 }

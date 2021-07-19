@@ -104,7 +104,7 @@ dependencies {
         runtimeOnly project(':app_me')
         runtimeOnly project(':module_login')
     }
-    implementation project(':lib:lib_common')
+    implementation project(':lib:lib_base')
 
     //https://github.com/Vincent7Wong/EasyNavigation
     implementation 'com.github.Vincent7Wong:EasyNavigation:2.0.5'

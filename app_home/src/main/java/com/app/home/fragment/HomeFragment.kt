@@ -2,8 +2,7 @@ package com.app.home.fragment
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.app.base.BaseFragment
-import com.app.config.PathConfig
-import com.app.home.R
+import com.app.common.config.PathConfig
 import com.app.home.databinding.HomeFragmentBinding
 
 @Route(path = PathConfig.Home.HomeFragment)

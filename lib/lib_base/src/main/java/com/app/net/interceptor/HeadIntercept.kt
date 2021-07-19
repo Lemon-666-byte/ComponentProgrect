@@ -1,7 +1,7 @@
 package com.app.net.interceptor
 
 import com.app.base.BuildConfig
-import com.app.utils.biz.Biz
+import com.app.common.utils.biz.Biz
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody
@@ -31,7 +31,7 @@ class HeadIntercept : Interceptor {
 //                        .addHeader("ms", getComonUriParms())
 //                        .addHeader("cv", AppTools.getVersionName())
                         .addHeader("referer", BuildConfig.HOST)
-                        .addHeader("token", Biz.instance.token)
+                        .addHeader("token", Biz.instance.sessionid)
                         .addHeader("uid", Biz.instance.uid)
                         .post(body)
             }

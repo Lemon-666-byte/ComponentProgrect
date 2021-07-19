@@ -1,4 +1,4 @@
-package com.app.net.bean
+package com.app.common.bean.base
 
 import java.io.Serializable
 
