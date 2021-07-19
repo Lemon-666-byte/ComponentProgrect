@@ -41,10 +41,12 @@ class LoginActivity : BaseMvpActivity<LoginContract.View, LoginPresenter>(), Log
         } else {
             if (result.isSuccess()) {
                 result.data?.let {
-                    MMkvUtils.getInstance.putString(MMkvConfigs.Login.loginName,it.name)
+                    MMkvUtils.getInstance.putString(MMkvConfigs.Login.loginName, it.name)
                     ARouter.getInstance().build(PathConfig.Main.MainActivity).navigation()
                     finish()
                 }
+            } else {
+                ToastUtils.showShort(result.msg)
             }
         }
     }

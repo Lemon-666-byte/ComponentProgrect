@@ -1,6 +1,5 @@
 package com.app.login.presenter
 
-import com.app.api.ApiLogin
 import com.app.base.mvp.BasePresenter
 import com.app.bean.login.Login
 import com.app.login.contract.LoginContract
@@ -20,7 +19,7 @@ open class LoginPresenter : BasePresenter<LoginContract.View>(), LoginContract.P
         params["name"] = name
         params["password"] = password
 
-        requestNetwork( ApiServiceUtils.apiLogin.login(params), object :
+        requestNetwork(ApiServiceUtils.apiLogin.login(params), object :
             NetRequestListener<BaseBean<Login?>?> {
             override fun onSuccess(result: BaseBean<Login?>?) {
                 getView()?.hideLoading()
