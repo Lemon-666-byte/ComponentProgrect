@@ -4,6 +4,7 @@ import com.app.base.BuildConfig
 import com.app.net.interceptor.HeadIntercept
 import com.app.net.interceptor.LoggingInterceptor
 import com.app.net.interceptor.TokenInterceptor
+import com.app.utils.MMkvUtils
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -63,4 +64,12 @@ class RetrofitClient {
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build()
     }
+
+
+//    fun getBaseUrl(): String? {
+//        val serverIp: String = MMkvUtils.getString(MMkvC)
+//        val serverPort: String = MMkvUtils.getString("serverPort")
+        //        String loginUrl = "http://lrnimo.utools.club";//楚凡外网
+//        return "http://$serverIp:$serverPort"
+//    }
 }

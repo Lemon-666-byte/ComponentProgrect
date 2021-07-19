@@ -5,6 +5,11 @@ package com.app.config
  */
 class MMkvConfigs {
 
+    object BaseUrl {
+        const val serverIp = "serverIp"
+        const val serverPort = "serverPort"
+    }
+
     object Login {
         const val loginName = "loginName"
     }
