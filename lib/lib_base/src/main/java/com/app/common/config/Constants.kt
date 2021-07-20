@@ -9,10 +9,21 @@ object Constants {
         var url = ("(((https|http)?://)?([a-z0-9]+[.])|(www.))"
                 + "\\w+[.|\\/]([a-z0-9]{0,})?[[.]([a-z0-9]{0,})]+((/[\\S&&[^,;\u4E00-\u9FA5]]+)+)?([.][a-z0-9]{0,}+|/?)") //设置正则表达式
 
-    } object BaseUrl {
+    }
+
+    object BaseUrl {
         const val tldz = "rtmp://20.64.26.29:11935/live" //
     }
 
+    object Workbench {
+        const val xsgl = "巡视管理"
+        const val qxgl = "缺陷管理"
+        const val yhgl = "隐患管理"
+        const val bdgl = "保电管理"
+        const val jxjsy = "检修及试验"
+        const val gzqx = "故障抢修"
+        const val ddjc = "带电检测"
+    }
     object MapType {
         const val navi = "navi" // 导航
         const val offline = "offline" // 离线

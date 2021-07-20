@@ -3,22 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@color/app_background"
     tools:ignore="ResourceName">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
+        android:id="@+id/rvWorkBench"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_100"
-        android:gravity="center"
-        android:padding="@dimen/dp_50"
-        android:text="工作台" />
 </RelativeLayout>
 

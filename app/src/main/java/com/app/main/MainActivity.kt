@@ -1,6 +1,5 @@
 package com.app.main
 
-import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
@@ -25,16 +24,14 @@ class MainActivity : BaseActivity() {
 
     override fun initBar(initBar: Boolean) {
         super.initBar(false)
-        BarUtils.setStatusBarColor(this,ColorUtils.getColor(R.color.colorBlack000))
+        BarUtils.setStatusBarColor(this, ColorUtils.getColor(R.color.colorBlack000))
         BarUtils.setStatusBarLightMode(this, true)
     }
 
-    override fun savedInstanceState(savedInstanceState: Bundle?) {
-        super.savedInstanceState(savedInstanceState)
 
-    }
     override fun setData() {
         initFragments()
+//        binding.navigationBar.viewPager.currentItem = 1
 //        LiveEventBus.get(EventConfigs.UserData.userInfo, String::class.java)
 //            .observe(this, { t -> LogUtils.e("aaaaaa->$t") })
 //        ThreadUtils.executeByIo(object : ThreadUtils.SimpleTask<String>() {
@@ -55,15 +52,6 @@ class MainActivity : BaseActivity() {
 
 
     override fun addListeners() {
-//        tvGo.setOnClickListener {
-//            LogUtils.e("ARouterInterceptor", "->" + "tvGo")
-//            ARouter.getInstance().build(PathConfig.Home.HomeActivity).navigation()
-
-//            val testUriMix = Uri.parse("arouter://m.aliyun.com/home/HomeActivity")
-//            ARouter.getInstance().build(testUriMix)
-//                    .withString("key1", "value1")
-//                    .navigation()
-//        }
     }
 
 
@@ -113,6 +101,7 @@ class MainActivity : BaseActivity() {
         val viewPager: ViewPager = binding.navigationBar.viewPager
         viewPager.offscreenPageLimit = fragments.size
 
+        LogUtils.e("aaa", "  ===="+ viewPager.childCount )
         binding.navigationBar.onTabClickListener = object : OnTabClickListener {
             override fun onTabSelectEvent(view: View?, position: Int): Boolean {
                 LogUtils.e("navigation", "选择了$position")
@@ -129,6 +118,11 @@ class MainActivity : BaseActivity() {
             }
 
         }
+        binding.navigationBar.setOnTabLoadListener {
+            LogUtils.e("navigation", "加载完成")
+            binding.navigationBar.selectTab(1,false)
+        }
+
     }
 
 }
