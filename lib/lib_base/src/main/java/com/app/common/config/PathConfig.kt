@@ -29,12 +29,23 @@ class PathConfig {
 
     object WorkBench {
         const val WorkBenchActivity = "/workbench/WorkBenchActivity"
-
         /**
          *
          */
         const val WorkBenchFragment = "/workbench/WorkBenchFragment"
+
+
     }
+
+    /**
+     * 带电检测模块
+     */
+    object Ddjc {
+
+        const val ElecTestActivity = "/ddjc/ElecTestActivity"
+
+    }
+
 
     object Me {
         const val MeActivity = "/me/MeActivity"

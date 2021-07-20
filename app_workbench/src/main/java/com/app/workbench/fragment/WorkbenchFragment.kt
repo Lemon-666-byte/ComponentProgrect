@@ -2,6 +2,7 @@ package com.app.workbench.fragment
 
 import androidx.recyclerview.widget.GridLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.app.base.BaseFragment
 import com.app.common.config.Constants
 import com.app.common.config.PathConfig
@@ -72,6 +73,7 @@ class WorkbenchFragment : BaseFragment() {
                 Constants.Workbench.ddjc -> {
                     // 带电检测
                     LogUtils.e(classTag, "带电检测")
+                    ARouter.getInstance().build(PathConfig.Ddjc.ElecTestActivity).navigation()
                 }
             }
         }
