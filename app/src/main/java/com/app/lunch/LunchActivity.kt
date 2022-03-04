@@ -16,7 +16,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 import java.util.concurrent.TimeUnit
 
 /**
- * 软件启动页面  测试 git...
+ * 软件启动页面  测试 git.........
  */
 class LunchActivity : BaseActivity() {
 
